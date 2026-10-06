@@ -1,0 +1,142 @@
+image: node:22
+
+definitions:
+  caches:
+    pnpm: ~/.pnpm-store
+
+  steps:
+    - step: &build-storybook
+        name: Build Storybook
+        caches:
+          - pnpm
+          - node
+        script:
+          - apt-get update && apt-get install -y python3 make g++
+          - corepack enable pnpm
+          - HUSKY=0 pnpm install --frozen-lockfile --ignore-scripts
+          - pnpm run build-storybook
+        artifacts:
+          - storybook-static/**
+
+    - step: &deploy-cloudflare-develop
+        name: Deploy Storybook to Cloudflare (develop)
+        image: node:22
+        script:
+          - corepack enable pnpm
+          - pnpm dlx wrangler pages deploy storybook-static --project-name=curva-s-story --branch=develop
+        env:
+          CLOUDFLARE_API_TOKEN: $CLOUDFLARE_API_TOKEN
+          CLOUDFLARE_ACCOUNT_ID: $CLOUDFLARE_ACCOUNT_ID
+        after-script:
+          - |
+            echo "✅ Storybook deployed successfully!"
+            echo "📚 View at: https://develop.curva-s-story.pages.dev"
+
+    - step: &deploy-cloudflare-main
+        name: Deploy Storybook to Cloudflare (main)
+        image: node:22
+        script:
+          - corepack enable pnpm
+          - pnpm dlx wrangler pages deploy storybook-static --project-name=curva-s-story
+        env:
+          CLOUDFLARE_API_TOKEN: $CLOUDFLARE_API_TOKEN
+          CLOUDFLARE_ACCOUNT_ID: $CLOUDFLARE_ACCOUNT_ID
+        after-script:
+          - |
+            echo "✅ Storybook deployed successfully!"
+            echo "📚 View at: https://curva-s-story.pages.dev"
+
+    - step: &deploy-web-staging
+        name: Deploy Web App to Staging VPS
+        deployment: staging
+        image: atlassian/default-image:4
+        script:
+          - pipe: atlassian/ssh-run:0.8.1
+            variables:
+              SSH_USER: $SSH_USER
+              SERVER: $SSH_HOST
+              COMMAND: '/opt/apps/web/deploy.sh'
+
+    - step: &transition-jira
+        name: Transition Jira Tickets
+        image: atlassian/default-image:4
+        script:
+          - apt-get update && apt-get install -y jq curl
+          - |
+            echo "Fetching PR for commit $BITBUCKET_COMMIT..."
+            
+            PR_RESPONSE=$(curl -s -H "Authorization: Bearer $BITBUCKET_REPO_TOKEN" \
+              "https://api.bitbucket.org/2.0/repositories/$BITBUCKET_REPO_FULL_NAME/commit/$BITBUCKET_COMMIT/pullrequests?state=MERGED")
+            
+            PR_TITLE=$(echo "$PR_RESPONSE" | jq -r '.values[0].title // empty')
+            
+            if [ -z "$PR_TITLE" ]; then
+              echo "No merged PR found for this commit. Skipping Jira update."
+              exit 0
+            fi
+            
+            echo "PR title: $PR_TITLE"
+            
+            TICKETS=$(echo "$PR_TITLE" | grep -oE 'SCS-[0-9]+' | sort -u)
+            
+            if [ -z "$TICKETS" ]; then
+              echo "No SCS ticket found in PR title. Skipping."
+              exit 0
+            fi
+            
+            echo "Tickets to transition: $TICKETS"
+            
+            for ticket in $TICKETS; do
+              echo "Transitioning $ticket to Done..."
+              HTTP_CODE=$(curl -s -o /tmp/jira-response.json -w "%{http_code}" \
+                -u "$JIRA_EMAIL:$JIRA_API_TOKEN" \
+                -X POST \
+                -H "Content-Type: application/json" \
+                -d "{\"transition\":{\"id\":\"$JIRA_DONE_TRANSITION_ID\"}}" \
+                "$JIRA_BASE_URL/rest/api/3/issue/$ticket/transitions")
+            
+              if [ "$HTTP_CODE" = "204" ]; then
+                echo "  -> Success ($HTTP_CODE)"
+              else
+                echo "  -> Failed ($HTTP_CODE):"
+                cat /tmp/jira-response.json
+                echo ""
+              fi
+            done
+            
+            echo "Jira transition step complete."
+            
+    - step: &deploy-web-production
+        name: Deploy Web App to Production VPS
+        deployment: production
+        trigger: manual
+        image: atlassian/default-image:4
+        script:
+          - pipe: atlassian/ssh-run:0.8.1
+            variables:
+              SSH_USER: $SSH_USER
+              SERVER: $SSH_HOST
+              COMMAND: '/opt/apps/web/deploy.sh'
+
+pipelines:
+  branches:
+    develop:
+      - parallel:
+          - step: *build-storybook
+          - step: *deploy-web-staging
+      - step: *deploy-cloudflare-develop
+      - step: *transition-jira
+
+    main:
+      - step: *build-storybook
+      - step: *deploy-cloudflare-main
+      - step: *deploy-web-production
+
+  pull-requests:
+    "**":
+      - step: *build-storybook
+
+  custom:
+    shared-components-rebuild:
+      - step: *build-storybook
+      - step: *deploy-cloudflare-develop

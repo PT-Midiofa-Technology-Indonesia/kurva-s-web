@@ -1,0 +1,102 @@
+import { COMMON_LABELS, COMMON_STATUS_OPTIONS } from '@/shared/constants';
+
+export const COST_ITEM_TYPE_LABELS = {
+  LIST: {
+    TITLE: 'Cost Item Type',
+    ADD_BUTTON: 'Tambah Cost Item Type Baru',
+    EMPTY: 'Tidak ada cost item type ditemukan',
+    COLUMNS: {
+      CODE: COMMON_LABELS.FIELDS.CODE,
+      NAME: 'Nama Cost Item Type',
+      DESCRIPTION: COMMON_LABELS.FIELDS.DESCRIPTION,
+      STATUS: COMMON_LABELS.FIELDS.STATUS,
+      CREATED_AT: COMMON_LABELS.FIELDS.CREATED_AT,
+      ACTIONS: COMMON_LABELS.FIELDS.ACTIONS,
+    },
+    STATUS: COMMON_LABELS.STATUS,
+    ACTIONS: COMMON_LABELS.LIST.ACTIONS,
+    FILTERS: {
+      STATUS: 'Semua Status',
+    },
+  },
+  CREATE: {
+    PAGE_TITLE: 'Buat Cost Item Type Baru',
+    BACK_BUTTON: COMMON_LABELS.ACTIONS.BACK,
+    FIELDS: {
+      CODE: COMMON_LABELS.FIELDS.CODE,
+      NAME: COMMON_LABELS.FIELDS.NAME,
+      DESCRIPTION: COMMON_LABELS.FIELDS.DESCRIPTION,
+      STATUS: COMMON_LABELS.FIELDS.STATUS,
+    },
+    BUTTONS: {
+      CANCEL: COMMON_LABELS.ACTIONS.CANCEL,
+      SAVE: COMMON_LABELS.ACTIONS.SAVE,
+      SAVING: COMMON_LABELS.STATE.SAVING,
+    },
+    DIALOG: {
+      TITLE: 'Simpan Cost Item Type Baru?',
+      DESCRIPTION: 'Anda akan membuat cost item type baru dengan data yang telah ditentukan.',
+      CANCEL: COMMON_LABELS.ACTIONS.CANCEL,
+      CONFIRM: COMMON_LABELS.ACTIONS.SAVE,
+    },
+  },
+  EDIT: {
+    PAGE_TITLE: 'Edit Cost Item Type',
+    BACK_BUTTON: COMMON_LABELS.ACTIONS.BACK,
+    NOT_FOUND: 'Cost item type tidak ditemukan',
+    FIELDS: {
+      CODE: COMMON_LABELS.FIELDS.CODE,
+      NAME: COMMON_LABELS.FIELDS.NAME,
+      DESCRIPTION: COMMON_LABELS.FIELDS.DESCRIPTION,
+      STATUS: COMMON_LABELS.FIELDS.STATUS,
+    },
+    BUTTONS: {
+      CANCEL: COMMON_LABELS.ACTIONS.CANCEL,
+      SAVE: COMMON_LABELS.ACTIONS.SAVE_CHANGE,
+      SAVING: COMMON_LABELS.STATE.SAVING,
+    },
+    DIALOG: {
+      TITLE: 'Simpan Perubahan?',
+      DESCRIPTION: 'Anda akan menyimpan perubahan pada cost item type ini.',
+      CANCEL: COMMON_LABELS.ACTIONS.CANCEL,
+      CONFIRM: COMMON_LABELS.ACTIONS.SAVE,
+    },
+  },
+  DETAIL: {
+    PAGE_TITLE: 'Detail Cost Item Type',
+    FIELDS: {
+      CODE: COMMON_LABELS.FIELDS.CODE,
+      NAME: 'Nama Cost Item Type',
+      DESCRIPTION: COMMON_LABELS.FIELDS.DESCRIPTION,
+      STATUS: COMMON_LABELS.FIELDS.STATUS,
+    },
+    STATUS_ACTIVE: COMMON_LABELS.STATUS.ACTIVE,
+    STATUS_INACTIVE: COMMON_LABELS.STATUS.INACTIVE,
+    BUTTONS: {
+      EDIT: COMMON_LABELS.ACTIONS.EDIT,
+      CLOSE: COMMON_LABELS.ACTIONS.CANCEL,
+    },
+    DIALOG: {
+      CHANGE_STATUS_TITLE: COMMON_LABELS.DIALOG.CHANGE_STATUS_TITLE,
+      CHANGE_STATUS_DESCRIPTION: 'Anda akan mengubah status cost item type ini.',
+      CHANGE_STATUS_CANCEL: COMMON_LABELS.ACTIONS.CANCEL,
+      CHANGE_STATUS_CONFIRM: COMMON_LABELS.ACTIONS.SAVE,
+    },
+  },
+  FORM: {
+    TITLE: 'Cost Item Type',
+  },
+  DIALOG: {
+    DELETE_TITLE: 'Delete Cost Item Type',
+    DELETE_DESCRIPTION: 'Are you sure you want to delete this cost item type?',
+  },
+} as const;
+
+export const STATUS_OPTIONS = COMMON_STATUS_OPTIONS;
+
+export const PLACEHOLDERS = {
+  CODE: 'Masukan kode cost item type',
+  NAME: 'Masukan nama cost item type',
+  DESCRIPTION: 'Masukan deskripsi cost item type',
+  STATUS: COMMON_LABELS.PLACEHOLDERS.STATUS,
+} as const;

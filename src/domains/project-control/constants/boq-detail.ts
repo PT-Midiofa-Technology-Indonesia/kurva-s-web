@@ -1,0 +1,43 @@
+export const BOQ_DETAIL_PAGE_LABELS = {
+  PAGE_TITLE: 'BOQ Detail',
+  BREADCRUMB: {
+    PROJECT_CONTROL: 'Project Control',
+    PROJECT: 'Project',
+  },
+  BACK_BUTTON: 'Kembali',
+  INFORMATION_CARD: {
+    TITLE: 'Informasi Project',
+    LABELS: {
+      PROJECT_NAME: 'Nama Project',
+      PROJECT_TYPE: 'Tipe Project',
+      PROJECT_OWNER: 'Pemilik Project',
+      CLIENT: 'Klien',
+      ESTIMATED_VALUE: 'Estimasi Nilai Project',
+      TOTAL_VALUE: 'Nilai Project',
+      LIMIT_BUDGET: 'Limit Budget',
+      TOTAL_VALUE_CCO: 'Nilai CCO',
+      PROJECT_PERIOD: 'Periode Project',
+      DESCRIPTION: 'Deskripsi',
+    },
+  },
+  TABLE: {
+    TITLE: 'Detail Project',
+    SEARCH_PLACEHOLDER: 'Pencarian',
+    EMPTY: 'Belum ada data',
+    KODE: 'Kode',
+    VIEW_COST: 'View Cost',
+    JOB_ITEM: 'Job/Item',
+    JENIS: 'Jenis',
+    VOLUME: 'Volume',
+    RAB: 'RAB',
+    CCO: 'CCO',
+    ACT: 'ACT',
+    UOM: 'UoM',
+    AMOUNT: 'Amount',
+    AMOUNT_RAB: 'RAB',
+  },
+  CONTEXT_MENU: {
+    CREATE_PR: 'Create PR',
+    CREATE_PR_BUNDLE: 'Create PR Bundle',
+  },
+} as const;

@@ -1,0 +1,1 @@
+export { PermissionsAccordion } from './PermissionsAccordion';

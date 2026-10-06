@@ -1,0 +1,46 @@
+# Dependencies
+node_modules/
+pnpm-lock.yaml
+package-lock.json
+yarn.lock
+
+# Build outputs
+.next/
+dist/
+build/
+.turbo/
+
+# Environment & secrets
+.env
+.env.local
+.env.*.local
+
+# Logs
+*.log
+logs/
+npm-debug.log*
+pnpm-debug.log*
+yarn-debug.log*
+
+# Testing & coverage
+coverage/
+.nyc_output/
+
+# IDE & editor
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+
+# Git
+.git/
+.gitignore
+
+# Graphify cache
+graphify-out/
+
+# Temporary files
+tmp/
+temp/
+*.tmp

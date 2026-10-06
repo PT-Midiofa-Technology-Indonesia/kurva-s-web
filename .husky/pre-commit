@@ -1,0 +1,7 @@
+# Run type-check on entire project
+echo "Running TypeScript type-check..."
+pnpm type-check || exit 1
+
+# Run lint-staged on changed files
+echo "Running lint-staged on changed files..."
+npx lint-staged

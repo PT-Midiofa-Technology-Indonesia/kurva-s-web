@@ -1,0 +1,455 @@
+{
+  "v": 12,
+  "id": "cmuc1o1y40llzg41jx1rvfbu7",
+  "name": "QC",
+  "folders": [],
+  "requests": [
+    {
+      "v": "17",
+      "auth": {
+        "token": "<<token>>",
+        "authType": "bearer",
+        "authActive": true
+      },
+      "body": {
+        "body": null,
+        "contentType": null
+      },
+      "name": "List Task Qc",
+      "method": "GET",
+      "params": [],
+      "headers": [
+        {
+          "key": "X-Project-Id",
+          "value": "019fc6d3-dc20-716e-92da-547af97d8bc0",
+          "active": true,
+          "description": ""
+        }
+      ],
+      "endpoint": "<<BASE_URL>>/v1/project-management/quality-control",
+      "responses": {
+        "success": {
+          "body": "{\"success\":true,\"message\":\"Daftar quality control berhasil diambil.\",\"data\":[{\"id\":\"01a0c6de-36d5-7362-ad22-f9a6044bc24f\",\"projectId\":\"019fc6d3-dc20-716e-92da-547af97d8bc0\",\"boqItemId\":\"019fc6d3-dca0-705c-a371-6c349b2bc32c\",\"boqItem\":{\"id\":\"019fc6d3-dca0-705c-a371-6c349b2bc32c\",\"code\":\"A.1.1\",\"name\":\"Pengiriman Alat Berat\",\"uom\":{\"id\":\"019e900f-8447-727f-b0fd-b8ab35f33d43\",\"code\":\"L011\",\"name\":\"CM\"}},\"title\":\"Pengiriman Alat Berat\",\"sourceWorkTaskId\":\"01a0c6dd-ebd6-73ad-ac87-79d1495c184b\",\"status\":\"waiting\",\"statusLabel\":\"Menunggu\",\"qcDecision\":null,\"note\":null,\"targetVolume\":20,\"completedVolume\":20,\"assignDate\":null,\"assignedEmployee\":null,\"createdBy\":{\"id\":\"019fc6d3-dddc-73ba-b639-6c91b8127b83\",\"name\":\"Budi Santoso\"},\"decidedBy\":null,\"doneAt\":null,\"createdAt\":\"2026-09-22T09:07:26+07:00\",\"workTask\":{\"id\":\"01a0c6dd-ebd6-73ad-ac87-79d1495c184b\",\"title\":\"Pengiriman Alat Berat\",\"status\":\"qc_waiting\",\"assignDate\":\"2026-09-22\",\"targetVolume\":20,\"completedVolume\":20,\"assignedEmployee\":{\"id\":\"019fc6d3-def7-703b-b207-970b6a103024\",\"code\":\"PP-EMP-002\",\"fullName\":\"Sari Wulandari\"},\"helperEmployees\":[{\"id\":\"019fc6d3-e1af-72dc-be30-e223d9fefe91\",\"code\":\"PP-EMP-005\",\"fullName\":\"Dedi Kurniawan\"}]}}],\"meta\":{\"currentPage\":1,\"perPage\":15,\"total\":1,\"lastPage\":1,\"from\":1,\"to\":1},\"links\":{\"first\":\"http:\\/\\/127.0.0.1:8000\\/api\\/v1\\/project-management\\/quality-control?page=1\",\"last\":\"http:\\/\\/127.0.0.1:8000\\/api\\/v1\\/project-management\\/quality-control?page=1\",\"prev\":null,\"next\":null},\"counts\":{\"waiting\":1}}",
+          "code": 200,
+          "name": "success",
+          "status": "OK",
+          "headers": [
+            {
+              "key": "cache-control",
+              "value": "no-cache, private"
+            },
+            {
+              "key": "content-type",
+              "value": "application/json"
+            }
+          ],
+          "originalRequest": {
+            "v": "6",
+            "auth": {
+              "token": "<<token>>",
+              "authType": "bearer",
+              "authActive": true
+            },
+            "body": {
+              "body": null,
+              "contentType": null
+            },
+            "name": "List Task Qc",
+            "method": "GET",
+            "params": [],
+            "headers": [
+              {
+                "key": "X-Project-Id",
+                "value": "019fc6d3-dc20-716e-92da-547af97d8bc0",
+                "active": true,
+                "description": ""
+              }
+            ],
+            "endpoint": "<<BASE_URL>>/v1/project-management/quality-control",
+            "requestVariables": []
+          }
+        }
+      },
+      "testScript": "",
+      "description": null,
+      "preRequestScript": "",
+      "requestVariables": [],
+      "id": "cmuc1onvq0lm1g41jciazzrh5"
+    },
+    {
+      "v": "17",
+      "auth": {
+        "token": "<<token>>",
+        "authType": "bearer",
+        "authActive": true
+      },
+      "body": {
+        "body": "{\n  \"projectTaskIds\": [\n    \"01a0c6fc-bc32-716d-8690-d8ea0dd14269\"\n  ],\n  \"employeeId\": \"019fc6d3-dfe0-7355-87b2-f4342b174969\",\n  \"note\": \"Tolong cek hasil kerja.\"\n}",
+        "contentType": "application/json"
+      },
+      "name": "Delegate Task Qc",
+      "method": "POST",
+      "params": [],
+      "headers": [
+        {
+          "key": "X-Project-Id",
+          "value": "019fc6d3-dc20-716e-92da-547af97d8bc0",
+          "active": true,
+          "description": ""
+        }
+      ],
+      "endpoint": "<<BASE_URL>>/v1/project-management/quality-control/delegate",
+      "responses": {
+        "success": {
+          "body": "{\"success\":true,\"message\":\"QC task berhasil didelegasikan.\",\"data\":[{\"id\":\"01a0c6fc-bc32-716d-8690-d8ea0dd14269\",\"projectId\":\"019fc6d3-dc20-716e-92da-547af97d8bc0\",\"boqItemId\":\"019fc6d3-dca0-705c-a371-6c349b2bc32c\",\"boqItem\":{\"id\":\"019fc6d3-dca0-705c-a371-6c349b2bc32c\",\"code\":\"A.1.1\",\"name\":\"Pengiriman Alat Berat\",\"uom\":{\"id\":\"019e900f-8447-727f-b0fd-b8ab35f33d43\",\"code\":\"L011\",\"name\":\"CM\"}},\"title\":\"Pengiriman Alat Berat\",\"sourceWorkTaskId\":\"01a0c6fc-7757-730e-8c13-a3e722c9b8ee\",\"status\":\"in_progress\",\"statusLabel\":\"Progress\",\"qcDecision\":null,\"note\":\"Tolong cek hasil kerja.\",\"targetVolume\":20,\"completedVolume\":20,\"assignDate\":\"2026-09-22\",\"assignedEmployee\":{\"id\":\"019fc6d3-dfe0-7355-87b2-f4342b174969\",\"code\":\"PP-EMP-003\",\"fullName\":\"Ali Rahman\"},\"createdBy\":{\"id\":\"019fc6d3-dddc-73ba-b639-6c91b8127b83\",\"name\":\"Budi Santoso\"},\"decidedBy\":null,\"doneAt\":null,\"createdAt\":\"2026-09-22T09:40:47+07:00\",\"workTask\":{\"id\":\"01a0c6fc-7757-730e-8c13-a3e722c9b8ee\",\"title\":\"Pengiriman Alat Berat\",\"status\":\"qc_waiting\",\"assignDate\":\"2026-09-22\",\"targetVolume\":20,\"completedVolume\":20,\"note\":\"done\",\"assignedEmployee\":{\"id\":\"019fc6d3-def7-703b-b207-970b6a103024\",\"code\":\"PP-EMP-002\",\"fullName\":\"Sari Wulandari\"},\"helperEmployees\":[{\"id\":\"019fc6d3-e1af-72dc-be30-e223d9fefe91\",\"code\":\"PP-EMP-005\",\"fullName\":\"Dedi Kurniawan\"}],\"evidences\":[]},\"qcEvidence\":{\"uploadedDocuments\":[]}}]}",
+          "code": 200,
+          "name": "success",
+          "status": "OK",
+          "headers": [
+            {
+              "key": "cache-control",
+              "value": "no-cache, private"
+            },
+            {
+              "key": "content-type",
+              "value": "application/json"
+            }
+          ],
+          "originalRequest": {
+            "v": "6",
+            "auth": {
+              "token": "<<token>>",
+              "authType": "bearer",
+              "authActive": true
+            },
+            "body": {
+              "body": "{\n  \"projectTaskIds\": [\n    \"01a0c6fc-bc32-716d-8690-d8ea0dd14269\"\n  ],\n  \"employeeId\": \"019fc6d3-dfe0-7355-87b2-f4342b174969\",\n  \"note\": \"Tolong cek hasil kerja.\"\n}",
+              "contentType": "application/json"
+            },
+            "name": "Delegate Task Qc",
+            "method": "POST",
+            "params": [],
+            "headers": [
+              {
+                "key": "X-Project-Id",
+                "value": "019fc6d3-dc20-716e-92da-547af97d8bc0",
+                "active": true,
+                "description": ""
+              }
+            ],
+            "endpoint": "<<BASE_URL>>/v1/project-management/quality-control/delegate",
+            "requestVariables": []
+          }
+        }
+      },
+      "testScript": "",
+      "description": null,
+      "preRequestScript": "",
+      "requestVariables": [],
+      "id": "cmuc2ey520ln5g41j4bzm9r6r"
+    },
+    {
+      "v": "17",
+      "auth": {
+        "token": "<<token>>",
+        "authType": "bearer",
+        "authActive": true
+      },
+      "body": {
+        "body": "",
+        "contentType": "application/json"
+      },
+      "name": "Claim Task Qc",
+      "method": "POST",
+      "params": [],
+      "headers": [
+        {
+          "key": "X-Project-Id",
+          "value": "019fc6d3-dc20-716e-92da-547af97d8bc0",
+          "active": true,
+          "description": ""
+        }
+      ],
+      "endpoint": "<<BASE_URL>>/v1/project-management/quality-control/claim/<<projectTaskId>>",
+      "responses": {
+        "success": {
+          "body": "{\"success\":true,\"message\":\"QC task berhasil di-claim.\",\"data\":{\"id\":\"01a0c704-b4f1-72f9-be1f-ebc64d8135f0\",\"projectId\":\"019fc6d3-dc20-716e-92da-547af97d8bc0\",\"boqItemId\":\"019fc6d3-dca0-705c-a371-6c349b2bc32c\",\"boqItem\":{\"id\":\"019fc6d3-dca0-705c-a371-6c349b2bc32c\",\"code\":\"A.1.1\",\"name\":\"Pengiriman Alat Berat\",\"uom\":{\"id\":\"019e900f-8447-727f-b0fd-b8ab35f33d43\",\"code\":\"L011\",\"name\":\"CM\"}},\"title\":\"Pengiriman Alat Berat\",\"sourceWorkTaskId\":\"01a0c704-7032-718c-9bab-1ecb85f008ed\",\"status\":\"in_progress\",\"statusLabel\":\"Progress\",\"qcDecision\":null,\"note\":null,\"targetVolume\":30,\"completedVolume\":20,\"assignDate\":\"2026-09-22\",\"assignedEmployee\":{\"id\":\"019fc6d3-ddf2-7173-a4d7-0e8d32ed7e20\",\"code\":\"PP-EMP-001\",\"fullName\":\"Budi Santoso\"},\"createdBy\":{\"id\":\"019fc6d3-dddc-73ba-b639-6c91b8127b83\",\"name\":\"Budi Santoso\"},\"decidedBy\":null,\"doneAt\":null,\"createdAt\":\"2026-09-22T09:49:29+07:00\",\"workTask\":{\"id\":\"01a0c704-7032-718c-9bab-1ecb85f008ed\",\"title\":\"Pengiriman Alat Berat\",\"status\":\"qc_waiting\",\"assignDate\":\"2026-09-22\",\"targetVolume\":30,\"completedVolume\":20,\"note\":\"done\",\"assignedEmployee\":{\"id\":\"019fc6d3-def7-703b-b207-970b6a103024\",\"code\":\"PP-EMP-002\",\"fullName\":\"Sari Wulandari\"},\"helperEmployees\":[{\"id\":\"019fc6d3-e0c5-73f5-9e85-c85dcd142590\",\"code\":\"PP-EMP-004\",\"fullName\":\"Cecep Hidayat\"}],\"evidences\":[]},\"qcEvidence\":{\"uploadedDocuments\":[]}}}",
+          "code": 200,
+          "name": "success",
+          "status": "OK",
+          "headers": [
+            {
+              "key": "cache-control",
+              "value": "no-cache, private"
+            },
+            {
+              "key": "content-type",
+              "value": "application/json"
+            }
+          ],
+          "originalRequest": {
+            "v": "6",
+            "auth": {
+              "token": "<<token>>",
+              "authType": "bearer",
+              "authActive": true
+            },
+            "body": {
+              "body": "",
+              "contentType": "application/json"
+            },
+            "name": "Claim Task Qc",
+            "method": "POST",
+            "params": [],
+            "headers": [
+              {
+                "key": "X-Project-Id",
+                "value": "019fc6d3-dc20-716e-92da-547af97d8bc0",
+                "active": true,
+                "description": ""
+              }
+            ],
+            "endpoint": "<<BASE_URL>>/v1/project-management/quality-control/claim/<<projectTaskId>>",
+            "requestVariables": [
+              {
+                "key": "projectTaskId",
+                "value": "01a0c704-b4f1-72f9-be1f-ebc64d8135f0",
+                "active": true
+              }
+            ]
+          }
+        }
+      },
+      "testScript": "",
+      "description": null,
+      "preRequestScript": "",
+      "requestVariables": [
+        {
+          "key": "projectTaskId",
+          "value": "01a0c704-b4f1-72f9-be1f-ebc64d8135f0",
+          "active": true
+        }
+      ],
+      "id": "cmuc2yz2u0lsbg41jsam04rh2"
+    },
+    {
+      "v": "17",
+      "auth": {
+        "token": "<<token>>",
+        "authType": "bearer",
+        "authActive": true
+      },
+      "body": {
+        "body": null,
+        "contentType": null
+      },
+      "name": "Detail Task Qc",
+      "method": "GET",
+      "params": [],
+      "headers": [
+        {
+          "key": "X-Project-Id",
+          "value": "019fc6d3-dc20-716e-92da-547af97d8bc0",
+          "active": true,
+          "description": ""
+        }
+      ],
+      "endpoint": "<<BASE_URL>>/v1/project-management/quality-control/<<projectTaskId>>",
+      "responses": {
+        "success": {
+          "body": "{\"success\":true,\"message\":\"Detail quality control berhasil diambil.\",\"data\":{\"qcTask\":{\"id\":\"01a0c86d-fca4-71db-8ffd-cb337275d092\",\"projectId\":\"019fc6d3-dc20-716e-92da-547af97d8bc0\",\"boqItemId\":\"019fc6d3-dca0-705c-a371-6c349b2bc32c\",\"boqItem\":{\"id\":\"019fc6d3-dca0-705c-a371-6c349b2bc32c\",\"code\":\"A.1.1\",\"name\":\"Pengiriman Alat Berat\",\"uom\":{\"id\":\"019e900f-8447-727f-b0fd-b8ab35f33d43\",\"code\":\"L011\",\"name\":\"CM\"}},\"title\":\"Pengiriman Alat Berat\",\"sourceWorkTaskId\":\"01a0c847-9528-70b4-a1ab-3c66870b7bb9\",\"status\":\"done\",\"statusLabel\":\"Selesai\",\"qcDecision\":\"pass\",\"note\":\"oke baik untuk pengerjaannnya\",\"targetVolume\":20,\"completedVolume\":20,\"assignDate\":\"2026-09-22\",\"assignedEmployee\":{\"id\":\"019fc6d3-ddf2-7173-a4d7-0e8d32ed7e20\",\"code\":\"PP-EMP-001\",\"fullName\":\"Budi Santoso\"},\"createdBy\":{\"id\":\"019fc6d3-dddc-73ba-b639-6c91b8127b83\",\"name\":\"Budi Santoso\"},\"decidedBy\":{\"id\":\"019fc6d3-dddc-73ba-b639-6c91b8127b83\",\"name\":\"Budi Santoso\"},\"doneAt\":\"2026-09-22T16:26:42+07:00\",\"createdAt\":\"2026-09-22T16:24:06+07:00\",\"qcEvidence\":{\"documentType\":{\"id\":\"019f32b4-4128-7025-8154-444bd1619cb5\",\"code\":\"QC_EVIDENCE\",\"name\":\"QC Evidence\",\"description\":\"Bukti hasil review quality control project task\",\"allowedFileTypes\":\"jpg,jpeg,png,pdf,zip,doc,docx,xls,xlsx\",\"allowedFileSize\":10240},\"uploadedDocuments\":[{\"id\":\"01a0c870-5ea9-722d-8878-55cf45d13cbe\",\"fileName\":\"ZZZTest Doc.pdf\",\"filePath\":\"tasks\\/01a0c86d-fca4-71db-8ffd-cb337275d092\\/evidences\\/5xatAl1XmEZ2ISBjYIvjxV6T4ctlF41P8UK4tyIH.pdf\",\"url\":\"http:\\/\\/127.0.0.1:8000\\/storage\\/tasks\\/01a0c86d-fca4-71db-8ffd-cb337275d092\\/evidences\\/5xatAl1XmEZ2ISBjYIvjxV6T4ctlF41P8UK4tyIH.pdf\",\"fileSize\":35836,\"mimeType\":\"application\\/pdf\",\"uploadedAt\":\"2026-09-22T16:26:42+07:00\"}]}},\"workTask\":{\"id\":\"01a0c847-9528-70b4-a1ab-3c66870b7bb9\",\"projectId\":\"019fc6d3-dc20-716e-92da-547af97d8bc0\",\"boqItemId\":\"019fc6d3-dca0-705c-a371-6c349b2bc32c\",\"boqItem\":{\"id\":\"019fc6d3-dca0-705c-a371-6c349b2bc32c\",\"code\":\"A.1.1\",\"name\":\"Pengiriman Alat Berat\",\"uom\":{\"id\":\"019e900f-8447-727f-b0fd-b8ab35f33d43\",\"code\":\"L011\",\"name\":\"CM\"}},\"title\":\"Pengiriman Alat Berat\",\"status\":\"done\",\"statusLabel\":\"Selesai\",\"assignDate\":\"2026-09-22\",\"targetVolume\":20,\"completedVolume\":20,\"note\":\"done\",\"assignedEmployee\":{\"id\":\"019fc6d3-def7-703b-b207-970b6a103024\",\"code\":\"PP-EMP-002\",\"fullName\":\"Sari Wulandari\"},\"helperEmployees\":[{\"id\":\"019fc6d3-e1af-72dc-be30-e223d9fefe91\",\"code\":\"PP-EMP-005\",\"fullName\":\"Dedi Kurniawan\"}],\"createdBy\":{\"id\":\"019fc6d3-dddc-73ba-b639-6c91b8127b83\",\"name\":\"Budi Santoso\"},\"doneBy\":{\"id\":\"019fc6d3-dddc-73ba-b639-6c91b8127b83\",\"name\":\"Budi Santoso\"},\"doneAt\":\"2026-09-22T16:24:06+07:00\",\"retryCount\":0},\"taskHistory\":[{\"projectTaskId\":\"01a0c86d-fca4-71db-8ffd-cb337275d092\",\"actor\":{\"id\":\"019fc6d3-dddc-73ba-b639-6c91b8127b83\",\"name\":\"Budi Santoso\"},\"note\":\"oke baik untuk pengerjaannnya\",\"documents\":[{\"id\":\"01a0c870-5ea9-722d-8878-55cf45d13cbe\",\"documentType\":{\"id\":\"019f32b4-4128-7025-8154-444bd1619cb5\",\"code\":\"QC_EVIDENCE\",\"name\":\"QC Evidence\"},\"fileName\":\"ZZZTest Doc.pdf\",\"filePath\":\"tasks\\/01a0c86d-fca4-71db-8ffd-cb337275d092\\/evidences\\/5xatAl1XmEZ2ISBjYIvjxV6T4ctlF41P8UK4tyIH.pdf\",\"url\":\"http:\\/\\/127.0.0.1:8000\\/storage\\/tasks\\/01a0c86d-fca4-71db-8ffd-cb337275d092\\/evidences\\/5xatAl1XmEZ2ISBjYIvjxV6T4ctlF41P8UK4tyIH.pdf\",\"fileSize\":35836,\"mimeType\":\"application\\/pdf\",\"uploadedAt\":\"2026-09-22T16:26:42+07:00\"}],\"recordedAt\":\"2026-09-22T16:26:42+07:00\",\"event\":\"qc_decision\",\"eventLabel\":\"QC menyetujui tugas\",\"decision\":{\"value\":\"approved\",\"label\":\"Disetujui\"}},{\"projectTaskId\":\"01a0c847-9528-70b4-a1ab-3c66870b7bb9\",\"actor\":{\"id\":\"019fc6d3-dddc-73ba-b639-6c91b8127b83\",\"name\":\"Budi Santoso\"},\"note\":\"done\",\"documents\":[{\"id\":\"01a0c86d-fca0-7202-b2e5-15dcf3d4d267\",\"documentType\":{\"id\":\"019f32b4-4120-735f-8352-cf498c83e857\",\"code\":\"TASK_EVIDENCE\",\"name\":\"Task Evidence\"},\"fileName\":\"ZZZTest Doc.pdf\",\"filePath\":\"tasks\\/01a0c847-9528-70b4-a1ab-3c66870b7bb9\\/evidences\\/eBDg2dNtPHXrpuhpotv5bYMzEKE8XdLZ1eYUKmqr.pdf\",\"url\":\"http:\\/\\/127.0.0.1:8000\\/storage\\/tasks\\/01a0c847-9528-70b4-a1ab-3c66870b7bb9\\/evidences\\/eBDg2dNtPHXrpuhpotv5bYMzEKE8XdLZ1eYUKmqr.pdf\",\"fileSize\":35836,\"mimeType\":\"application\\/pdf\",\"uploadedAt\":\"2026-09-22T16:24:06+07:00\"}],\"recordedAt\":\"2026-09-22T16:24:06+07:00\",\"event\":\"submitted_to_qc\",\"eventLabel\":\"Tugas diajukan ke QC\"}]}}",
+          "code": 200,
+          "name": "success",
+          "status": "OK",
+          "headers": [
+            {
+              "key": "cache-control",
+              "value": "no-cache, private"
+            },
+            {
+              "key": "content-type",
+              "value": "application/json"
+            }
+          ],
+          "originalRequest": {
+            "v": "6",
+            "auth": {
+              "token": "<<token>>",
+              "authType": "bearer",
+              "authActive": true
+            },
+            "body": {
+              "body": null,
+              "contentType": null
+            },
+            "name": "Detail Task Qc",
+            "method": "GET",
+            "params": [],
+            "headers": [
+              {
+                "key": "X-Project-Id",
+                "value": "019fc6d3-dc20-716e-92da-547af97d8bc0",
+                "active": true,
+                "description": ""
+              }
+            ],
+            "endpoint": "<<BASE_URL>>/v1/project-management/quality-control/<<projectTaskId>>",
+            "requestVariables": [
+              {
+                "key": "projectTaskId",
+                "value": "01a0c86d-fca4-71db-8ffd-cb337275d092",
+                "active": true
+              }
+            ]
+          }
+        }
+      },
+      "testScript": "",
+      "description": null,
+      "preRequestScript": "",
+      "requestVariables": [
+        {
+          "key": "projectTaskId",
+          "value": "01a0c86d-fca4-71db-8ffd-cb337275d092",
+          "active": true
+        }
+      ],
+      "id": "cmuc2zutn0qzve11j7vf2er4v"
+    },
+    {
+      "v": "17",
+      "auth": {
+        "token": "<<token>>",
+        "authType": "bearer",
+        "authActive": true
+      },
+      "body": {
+        "body": [
+          {
+            "key": "qcDecision",
+            "value": "pass",
+            "active": true,
+            "isFile": false
+          },
+          {
+            "key": "note",
+            "value": "done",
+            "active": true,
+            "isFile": false
+          },
+          {
+            "key": "files[0]",
+            "value": [
+              {}
+            ],
+            "active": true,
+            "isFile": true
+          }
+        ],
+        "contentType": "multipart/form-data"
+      },
+      "name": "Mark Done Qc",
+      "method": "POST",
+      "params": [],
+      "headers": [
+        {
+          "key": "X-Project-Id",
+          "value": "019fc6d3-dc20-716e-92da-547af97d8bc0",
+          "active": true,
+          "description": ""
+        }
+      ],
+      "endpoint": "<<BASE_URL>>/v1/project-management/quality-control/<<projectTaskId>>/decision",
+      "responses": {
+        "success": {
+          "body": "{\"success\":true,\"message\":\"Keputusan QC berhasil disimpan.\",\"data\":{\"id\":\"01a0c6fc-bc32-716d-8690-d8ea0dd14269\",\"projectId\":\"019fc6d3-dc20-716e-92da-547af97d8bc0\",\"boqItemId\":\"019fc6d3-dca0-705c-a371-6c349b2bc32c\",\"boqItem\":{\"id\":\"019fc6d3-dca0-705c-a371-6c349b2bc32c\",\"code\":\"A.1.1\",\"name\":\"Pengiriman Alat Berat\",\"uom\":{\"id\":\"019e900f-8447-727f-b0fd-b8ab35f33d43\",\"code\":\"L011\",\"name\":\"CM\"}},\"title\":\"Pengiriman Alat Berat\",\"sourceWorkTaskId\":\"01a0c6fc-7757-730e-8c13-a3e722c9b8ee\",\"status\":\"done\",\"statusLabel\":\"Selesai\",\"qcDecision\":\"pass\",\"note\":\"done\",\"targetVolume\":20,\"completedVolume\":20,\"assignDate\":\"2026-09-22\",\"assignedEmployee\":{\"id\":\"019fc6d3-dfe0-7355-87b2-f4342b174969\",\"code\":\"PP-EMP-003\",\"fullName\":\"Ali Rahman\"},\"createdBy\":{\"id\":\"019fc6d3-dddc-73ba-b639-6c91b8127b83\",\"name\":\"Budi Santoso\"},\"decidedBy\":{\"id\":\"019fc6d3-deec-7091-8d0f-d2ccf2789770\",\"name\":\"Sari Wulandari\"},\"doneAt\":\"2026-09-22T10:29:46+07:00\",\"createdAt\":\"2026-09-22T09:40:47+07:00\",\"workTask\":{\"id\":\"01a0c6fc-7757-730e-8c13-a3e722c9b8ee\",\"title\":\"Pengiriman Alat Berat\",\"status\":\"done\",\"assignDate\":\"2026-09-22\",\"targetVolume\":20,\"completedVolume\":20,\"note\":\"done\",\"assignedEmployee\":{\"id\":\"019fc6d3-def7-703b-b207-970b6a103024\",\"code\":\"PP-EMP-002\",\"fullName\":\"Sari Wulandari\"},\"helperEmployees\":[{\"id\":\"019fc6d3-e1af-72dc-be30-e223d9fefe91\",\"code\":\"PP-EMP-005\",\"fullName\":\"Dedi Kurniawan\"}],\"evidences\":[{\"id\":\"01a0c6fc-bc2c-71b1-abb5-6ad5a6e0cc99\",\"fileName\":\"ZZZTest Doc.pdf\",\"filePath\":\"tasks\\/01a0c6fc-7757-730e-8c13-a3e722c9b8ee\\/evidences\\/9c2jhKxNfgkazm1jKK2ZJsopef30rXPkksNu7i5A.pdf\",\"url\":\"http:\\/\\/127.0.0.1:8000\\/storage\\/tasks\\/01a0c6fc-7757-730e-8c13-a3e722c9b8ee\\/evidences\\/9c2jhKxNfgkazm1jKK2ZJsopef30rXPkksNu7i5A.pdf\",\"fileSize\":35836,\"mimeType\":\"application\\/pdf\",\"uploadedAt\":\"2026-09-22T09:40:47+07:00\"}]},\"qcEvidence\":{\"documentType\":{\"id\":\"019f32b4-4128-7025-8154-444bd1619cb5\",\"code\":\"QC_EVIDENCE\",\"name\":\"QC Evidence\",\"description\":\"Bukti hasil review quality control project task\",\"allowedFileTypes\":\"jpg,jpeg,png,pdf,zip,doc,docx,xls,xlsx\",\"allowedFileSize\":10240},\"uploadedDocuments\":[{\"id\":\"01a0c729-94c6-7330-acb3-062278f3e7a2\",\"fileName\":\"ZZZTest Doc.pdf\",\"filePath\":\"tasks\\/01a0c6fc-bc32-716d-8690-d8ea0dd14269\\/evidences\\/pWrvs8mQS4JgX8B4rDffjdVICRMmV3WFOcdrsQqj.pdf\",\"url\":\"http:\\/\\/127.0.0.1:8000\\/storage\\/tasks\\/01a0c6fc-bc32-716d-8690-d8ea0dd14269\\/evidences\\/pWrvs8mQS4JgX8B4rDffjdVICRMmV3WFOcdrsQqj.pdf\",\"fileSize\":35836,\"mimeType\":\"application\\/pdf\",\"uploadedAt\":\"2026-09-22T10:29:46+07:00\"}]}}}",
+          "code": 200,
+          "name": "success",
+          "status": "OK",
+          "headers": [
+            {
+              "key": "cache-control",
+              "value": "no-cache, private"
+            },
+            {
+              "key": "content-type",
+              "value": "application/json"
+            }
+          ],
+          "originalRequest": {
+            "v": "6",
+            "auth": {
+              "token": "<<token>>",
+              "authType": "bearer",
+              "authActive": true
+            },
+            "body": {
+              "body": [
+                {
+                  "key": "qcDecision",
+                  "value": "pass",
+                  "active": true,
+                  "isFile": false
+                },
+                {
+                  "key": "note",
+                  "value": "done",
+                  "active": true,
+                  "isFile": false
+                },
+                {
+                  "key": "files[0]",
+                  "value": [
+                    {}
+                  ],
+                  "active": true,
+                  "isFile": true
+                }
+              ],
+              "contentType": "multipart/form-data"
+            },
+            "name": "Mark Done Qc",
+            "method": "POST",
+            "params": [],
+            "headers": [
+              {
+                "key": "X-Project-Id",
+                "value": "019fc6d3-dc20-716e-92da-547af97d8bc0",
+                "active": true,
+                "description": ""
+              }
+            ],
+            "endpoint": "<<BASE_URL>>/v1/project-management/quality-control/<<projectTaskId>>/decision",
+            "requestVariables": [
+              {
+                "key": "projectTaskId",
+                "value": "01a0c6fc-bc32-716d-8690-d8ea0dd14269",
+                "active": true
+              }
+            ]
+          }
+        }
+      },
+      "testScript": "",
+      "description": null,
+      "preRequestScript": "",
+      "requestVariables": [
+        {
+          "key": "projectTaskId",
+          "value": "01a0c6fc-bc32-716d-8690-d8ea0dd14269",
+          "active": true
+        }
+      ],
+      "id": "cmuc48eg80lzsg41jqy5rb17z"
+    }
+  ],
+  "auth": {
+    "authType": "inherit",
+    "authActive": true
+  },
+  "headers": [],
+  "variables": [],
+  "description": null,
+  "preRequestScript": "",
+  "testScript": ""
+}

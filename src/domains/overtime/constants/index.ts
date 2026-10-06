@@ -1,0 +1,96 @@
+'use client';
+
+type BadgeVariant = 'default' | 'secondary' | 'destructive' | 'outline' | 'warning';
+
+export const OVERTIME_LABELS = {
+  LIST: {
+    TITLE: 'Overtime',
+    EMPTY: 'Belum ada data Overtime.',
+    ADD_BUTTON: 'Tambah Overtime Baru',
+    COLUMNS: {
+      DATE: 'Date',
+      NAME: 'Nama',
+      START_TIME: 'Start Time',
+      END_TIME: 'End Time',
+      DURATION: 'Duration',
+      RATE: 'Rate',
+      AMOUNT: 'Amount',
+      LOCATION: 'Location',
+      PROJECT: 'Project',
+      STATUS: 'Status',
+      ACTIONS: 'Action',
+    },
+    FILTERS: {
+      FILTER: 'Filter',
+      DATE_RANGE: 'Date range',
+      STATUS: 'Status',
+      EMPLOYEE: 'Employee',
+      PROJECT: 'Project',
+    },
+    PAGINATION: {
+      SHOWING: 'Showing',
+      TO: 'to',
+      OF: 'of',
+      ENTRIES: 'entries',
+      SHOW: 'Show',
+    },
+    SEARCH: 'Pencarian',
+  },
+  SETTINGS: {
+    TITLE: 'Setting Overtime',
+    RATE_PER_HOUR: 'Rate Per Jam (IDR)',
+    ROUNDING_METHOD: 'Metode Pembulatan',
+    THRESHOLD_MINUTES: 'Threshold (Menit)',
+    THRESHOLD_HINT: 'Hanya berlaku jika metode pembulatan adalah Threshold',
+    SAVE: 'Simpan',
+    CANCEL: 'Batal',
+  },
+  BUTTONS: {
+    SETTING: 'Setting Overtime',
+    BACK: 'Kembali',
+  },
+  DIALOG: {
+    DELETE_TITLE: 'Hapus Overtime',
+    DELETE_DESCRIPTION: 'Apakah yakin ingin menghapus overtime ini?',
+    CANCEL_TITLE: 'Batalkan Overtime',
+    CANCEL_DESCRIPTION: 'Apakah yakin ingin membatalkan overtime ini?',
+  },
+  FORM: {
+    CREATE_TITLE: 'Tambah Overtime Baru',
+    EDIT_TITLE: 'Edit Overtime',
+    DATE: 'Date',
+    EMPLOYEE: 'Nama',
+    EMPLOYEE_PLACEHOLDER: 'Cari employee',
+    PROJECT: 'Project',
+    PROJECT_PLACEHOLDER: 'Cari project',
+    LOCATION: 'Location',
+    LOCATION_PLACEHOLDER: 'Location',
+    LOCATION_DETAIL: 'Location Detail',
+    LOCATION_DETAIL_PLACEHOLDER: 'Pilih lokasi',
+    STATUS: 'Status',
+    START_TIME: 'Start Time',
+    END_TIME: 'End Time',
+    DURATION: 'Duration',
+    RATE: 'Rate Per Hour',
+    AMOUNT: 'Amount',
+    CALCULATING: 'Calculating...',
+    NOTES: 'Notes',
+    NOTES_PLACEHOLDER: 'Tulis catatan',
+    REASON: 'Reason',
+    REASON_PLACEHOLDER: 'Tulis alasan',
+    SAVE: 'Simpan',
+    SAVE_CHANGES: 'Simpan Perubahan',
+    CANCEL: 'Batal',
+  },
+  ACTIONS: {
+    VIEW: 'View',
+    EDIT: 'Edit',
+    DELETE: 'Delete',
+    CANCEL: 'Cancel',
+  },
+} as const;
+
+export const OVERTIME_STATUS_BADGE: Record<string, { label: string; variant: BadgeVariant }> = {
+  done: { label: 'Done', variant: 'default' },
+  cancelled: { label: 'Cancelled', variant: 'secondary' },
+};

@@ -1,0 +1,17 @@
+export {
+  type GetVendorCapabilitiesParams,
+  type GetVendorCapabilitiesResponse,
+  type GetVendorFleetVehiclesParams,
+  type GetVendorFleetVehiclesResponse,
+  type GetVendorItemCatalogsParams,
+  type GetVendorItemCatalogsResponse,
+  type GetVendorOfferingDocumentsParams,
+  type GetVendorOfferingDocumentsResponse,
+  type GetVendorServiceCoveragesParams,
+  type GetVendorServiceCoveragesResponse,
+  getVendorCapabilities,
+  getVendorFleetVehicles,
+  getVendorItemCatalogs,
+  getVendorOfferingDocuments,
+  getVendorServiceCoverages,
+} from '@/domains/vendor-catalog';

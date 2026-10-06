@@ -1,0 +1,126 @@
+{
+  "env": {},
+  "permissions": {
+    "allow": [
+      "Read(//private/tmp/**)",
+      "Bash(curl -s http://localhost:3000/design-system)",
+      "Bash(xargs kill *)",
+      "Bash(pkill -f \"dlx storybook\")",
+      "Bash(grep -E \"\\\\.\\(tsx|ts|jsx\\)$\")",
+      "Bash(pnpm biome *)",
+      "mcp__next-devtools__browser_eval",
+      "Bash(grep -E \"\\\\.\\(tsx?|jsx?\\)$\")",
+      "Bash(curl -s http://localhost:3000)",
+      "mcp__figma-developer-mcp__get_figma_data",
+      "Bash(kill 17901)",
+      "Bash(pnpm run *)",
+      "Bash(curl -s http://localhost:3000/)",
+      "Bash(pkill -f \"next dev\")",
+      "Bash(git -C /Users/adizulfikar/Developer/mediatechindo/curva-s-web status)",
+      "Bash(git -C /Users/adizulfikar/Developer/mediatechindo/curva-s-web diff --stat HEAD)",
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)",
+      "Bash(git push *)",
+      "Bash(gh pr *)",
+      "Bash(kill 33931)",
+      "Bash(pkill -9 node)",
+      "Bash(pnpm test:run src/shared/components/templates/ProjectControl/SetSchedule/schedule-utils.test.ts)",
+      "Bash(pnpm test:run src/shared/components/templates/ProjectControl/SetSchedule/SetSchedule.test.tsx)",
+      "Bash(pnpm test:run src/shared/components/organisms/GanttChart/ src/shared/components/templates/ProjectControl/SetSchedule/)",
+      "Bash(lsof -iTCP -sTCP:LISTEN -P)",
+      "Bash(curl -s http://localhost:6006/index.json --max-time 5)",
+      "Bash(bash __TRACKED_VAR__/scripts/task-brief docs/superpowers/plans/2026-07-03-setschedule-row-actions.md 1 .superpowers/sdd/setschedule/task-1-brief.md)",
+      "Bash(rtk wc *)",
+      "Bash(bash __TRACKED_VAR__/scripts/task-brief docs/superpowers/plans/2026-07-03-setschedule-row-actions.md 3 .superpowers/sdd/setschedule/task-3-brief.md)",
+      "Bash(bash __TRACKED_VAR__/scripts/task-brief docs/superpowers/plans/2026-07-03-setschedule-row-actions.md 4 .superpowers/sdd/setschedule/task-4-brief.md)",
+      "Bash(bash __TRACKED_VAR__/scripts/task-brief docs/superpowers/plans/2026-07-03-setschedule-row-actions.md 5 .superpowers/sdd/setschedule/task-5-brief.md)",
+      "Bash(bash __TRACKED_VAR__/scripts/task-brief docs/superpowers/plans/2026-07-03-setschedule-row-actions.md 6 .superpowers/sdd/setschedule/task-6-brief.md)",
+      "Bash(bash __TRACKED_VAR__/scripts/task-brief docs/superpowers/plans/2026-07-03-setschedule-row-actions.md 7 .superpowers/sdd/setschedule/task-7-brief.md)",
+      "Bash(echo \"---EXIT:$?---\")",
+      "Bash(pnpm test:run src/shared/components/molecules/DatePicker/DatePicker.test.tsx)",
+      "Bash(pnpm test:run src/shared/components/organisms/GanttChart/ src/shared/components/templates/ProjectControl/SetSchedule/ src/shared/components/molecules/DatePicker/)",
+      "Bash(sips -c 300 420 --cropOffset 95 280 three-fixes-default.png --out three-fixes-crop-tmp.png)",
+      "Bash(sips -z 600 840 three-fixes-crop-tmp.png --out three-fixes-crop.png)",
+      "Bash(rm -f /private/tmp/playwright-test-three-fixes.js /private/tmp/three-fixes*.png)",
+      "Bash(rtk diff *)",
+      "Bash(/Users/adizulfikar/.claude/plugins/cache/claude-plugins-official/superpowers/6.1.1/skills/subagent-driven-development/scripts/task-brief docs/superpowers/plans/2026-07-04-project-schedule-page.md 1)",
+      "Bash(pnpm test:run src/domains/project-control/hooks/__tests__/use-sync-project-boq-schedule.test.tsx)",
+      "Bash(/Users/adizulfikar/.claude/plugins/cache/claude-plugins-official/superpowers/6.1.1/skills/subagent-driven-development/scripts/review-package 1a7977d HEAD)",
+      "Bash(/Users/adizulfikar/.claude/plugins/cache/claude-plugins-official/superpowers/6.1.1/skills/subagent-driven-development/scripts/task-brief docs/superpowers/plans/2026-07-04-project-schedule-page.md 2)",
+      "Bash(pnpm test:run src/domains/project-control/services/__tests__/schedule-tree.service.test.ts)",
+      "Bash(/Users/adizulfikar/.claude/plugins/cache/claude-plugins-official/superpowers/6.1.1/skills/subagent-driven-development/scripts/review-package 43c354d HEAD)",
+      "Bash(node -e \"console.log\\(Boolean\\('0.0000'\\)\\); console.log\\(Number\\('0.0000'\\)\\);\")",
+      "Bash(node -e ' *)",
+      "Bash(/Users/adizulfikar/.claude/plugins/cache/claude-plugins-official/superpowers/6.1.1/skills/subagent-driven-development/scripts/task-brief docs/superpowers/plans/2026-07-04-project-schedule-page.md 3)",
+      "Bash(pnpm test:run src/domains/project-control/components/__tests__/InformasiProjectCard.test.tsx)",
+      "Bash(/Users/adizulfikar/.claude/plugins/cache/claude-plugins-official/superpowers/6.1.1/skills/subagent-driven-development/scripts/review-package 4f36a06 HEAD)",
+      "Bash(/Users/adizulfikar/.claude/plugins/cache/claude-plugins-official/superpowers/6.1.1/skills/subagent-driven-development/scripts/task-brief docs/superpowers/plans/2026-07-04-project-schedule-page.md 4)",
+      "Bash(pnpm test:run src/domains/project-control/pages/__tests__/SchedulePage.integration.test.tsx)",
+      "Bash(pnpm test:run src/domains/project-control/pages/__tests__/SchedulePage.integration.test.tsx --reporter=verbose)",
+      "Bash(mkdir -p \"/Users/adizulfikar/Developer/mediatechindo/curva-s-web/app/\\(protected\\)/project-control/project/[id]/schedule\")",
+      "Bash(/Users/adizulfikar/.claude/plugins/cache/claude-plugins-official/superpowers/6.1.1/skills/subagent-driven-development/scripts/review-package dfffd29 *)",
+      "Bash(/Users/adizulfikar/.claude/plugins/cache/claude-plugins-official/superpowers/6.1.1/skills/subagent-driven-development/scripts/task-brief docs/superpowers/plans/2026-07-04-project-schedule-page.md 5)",
+      "Bash(pnpm test:run src/domains/project-control/pages/__tests__/ProgressMonitoringPage.integration.test.tsx)",
+      "Bash(echo \"exit:$?\")",
+      "Bash(/Users/adizulfikar/.claude/plugins/cache/claude-plugins-official/superpowers/6.1.1/skills/subagent-driven-development/scripts/review-package 073828f ccd1c87)",
+      "Bash(/Users/adizulfikar/.claude/plugins/cache/claude-plugins-official/superpowers/6.1.1/skills/subagent-driven-development/scripts/review-package 1a7977d ccd1c87)",
+      "Bash(pnpm test:run src/domains/project-control)",
+      "Bash(rtk proxy *)",
+      "Bash(rm -f .git/index.lock && rtk git status)",
+      "Bash(./node_modules/.bin/vitest run *)",
+      "Bash(/usr/bin/grep -rn \"FormGenerator\" /Users/adizulfikar/Developer/mediatechindo/curva-s-web/src)",
+      "Bash(/usr/bin/grep -n \"enablePagination\\\\|totalItems\\\\|totalPages\\\\|dari\\\\|from ??\\\\|to ??\" /Users/adizulfikar/Developer/mediatechindo/curva-s-web/src/components/organisms/DataTable/*.tsx)",
+      "Bash(/usr/bin/grep -n \"dari\\\\|Menampilkan\\\\|pagination\\\\|Pagination\\\\|footer\\\\|Footer\" /Users/adizulfikar/Developer/mediatechindo/curva-s-web/src/shared/components/organisms/DataTable/DataTable.tsx)",
+      "Bash(/usr/bin/grep -n \"dari\\\\|from\\\\|to\\\\|total\" /Users/adizulfikar/Developer/mediatechindo/curva-s-web/src/shared/components/molecules/DataTablePagination/DataTablePagination.tsx)",
+      "Bash(/usr/bin/grep -rn \"export.*AsyncSelect\\\\|function AsyncSelect\" /Users/adizulfikar/Developer/mediatechindo/curva-s-web/src/components /Users/adizulfikar/Developer/mediatechindo/curva-s-web/src/shared)",
+      "Bash(git merge-base *)"
+    ],
+    "additionalDirectories": [
+      "/tmp",
+      "/private/tmp",
+      "/Users/adizulfikar/Developer/mediatechindo/curva-s-web/app/(protected)/project-control/project/[id]",
+      "/Users/adizulfikar/Developer/mediatechindo/curva-s-web/.git"
+    ]
+  },
+  "enabledMcpjsonServers": [
+    "next-devtools",
+    "shadcn",
+    "figma-developer-mcp",
+    "confluence"
+  ],
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "jq -r '.tool_response.filePath // .tool_input.file_path // \"\"' | { read -r f; if [[ \"$f\" =~ (\\.docs/.*\\.md|README\\.md)$ ]]; then cd /Users/adizulfikar/Developer/mediatechindo/curva-s-web && /Users/adizulfikar/.pyenv/versions/3.12.11/bin/python3.12 -c \"from graphify.build import build_from_json; from graphify.detect import detect; from pathlib import Path; import json; d=detect(Path('.')); print(f'Detected {d[\\\"total_files\\\"]} files - graph ready')\" 2>&1 | head -3; fi; } || true",
+            "timeout": 60,
+            "statusMessage": "Syncing knowledge graph..."
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "CMD=$(python3 -c \"import json,sys; d=json.load(sys.stdin); print(d.get('tool_input',d).get('command',''))\" 2>/dev/null || true); case \"$CMD\" in *grep*|*rg\\ *|*ripgrep*|*find\\ *|*fd\\ *|*ack\\ *|*ag\\ *)   [ -f graphify-out/graph.json ] &&   echo '{\"hookSpecificOutput\":{\"hookEventName\":\"PreToolUse\",\"additionalContext\":\"graphify: knowledge graph at graphify-out/. For focused questions, run `graphify query \\\"<question>\\\"` (scoped subgraph, usually much smaller than GRAPH_REPORT.md) instead of grepping raw files. Read GRAPH_REPORT.md only for broad architecture context.\"}}'   || true ;; esac"
+          }
+        ]
+      },
+      {
+        "matcher": "Read|Glob",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "HIT=$(python3 -c \"import json,sys;d=json.load(sys.stdin);t=d.get('tool_input',d);s=(str(t.get('file_path') or '')+' '+str(t.get('pattern') or '')+' '+str(t.get('path') or '')).lower().replace(chr(92),'/');exts=('.py','.js','.ts','.tsx','.jsx','.go','.rs','.java','.rb','.c','.h','.cpp','.hpp','.cc','.cs','.kt','.swift','.php','.scala','.lua','.sh','.md','.rst','.txt','.mdx');sys.stdout.write('1' if 'graphify-out/' not in s and any(e in s for e in exts) else '')\" 2>/dev/null || true); if [ \"$HIT\" = 1 ] && [ -f graphify-out/graph.json ]; then echo '{\"hookSpecificOutput\":{\"hookEventName\":\"PreToolUse\",\"additionalContext\":\"graphify: knowledge graph at graphify-out/. For codebase questions, run `graphify query \\\"<question>\\\"` (scoped subgraph, usually much smaller than reading files one by one), `graphify explain \\\"<concept>\\\"`, or `graphify path \\\"<A>\\\" \\\"<B>\\\"`, instead of reading source files to answer. Read raw files to modify or debug specific code, or when the graph lacks the detail.\"}}'; fi || true"
+          }
+        ]
+      }
+    ]
+  }
+}

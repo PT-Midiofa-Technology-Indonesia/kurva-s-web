@@ -1,0 +1,558 @@
+{
+  "v": 12,
+  "id": "cmub2b0860ebxe11jo6ec5xbt",
+  "name": "Manpower Planning",
+  "folders": [],
+  "requests": [
+    {
+      "v": "17",
+      "auth": {
+        "token": "<<token>>",
+        "authType": "bearer",
+        "authActive": true
+      },
+      "body": {
+        "body": null,
+        "contentType": null
+      },
+      "name": "Manpower Planning List",
+      "method": "GET",
+      "params": [
+        {
+          "key": "search",
+          "value": "",
+          "active": true,
+          "description": ""
+        },
+        {
+          "key": "status",
+          "value": "",
+          "active": true,
+          "description": ""
+        },
+        {
+          "key": "sortBy",
+          "value": "",
+          "active": true,
+          "description": ""
+        }
+      ],
+      "headers": [
+        {
+          "key": "X-Project-Id",
+          "value": "019fc6d3-dc20-716e-92da-547af97d8bc0",
+          "active": true,
+          "description": ""
+        }
+      ],
+      "endpoint": "<<BASE_URL>>/v1/project-management/manpower-planning",
+      "responses": {
+        "success": {
+          "body": "{\"success\":true,\"message\":\"Data detail BOQ berhasil diambil.\",\"data\":{\"project\":{\"id\":\"019fc6d3-dc20-716e-92da-547af97d8bc0\",\"parentId\":null,\"isSideInstruction\":false,\"projectSourceCategory\":\"main_contract\",\"code\":\"PP-DEMO-001\",\"name\":\"Demo Portal Project - Manpower Planning\",\"description\":\"Project dummy untuk uji coba Manpower Planning dan Quality Control.\",\"currentStageName\":\"Won\",\"estimatedValue\":1000000000,\"totalValue\":0,\"projectStartDate\":\"2026-07-31T17:00:00.000000Z\",\"isActive\":true,\"company\":{\"id\":\"019e95c2-8851-73af-9bed-486de1d0fe07\",\"name\":\"PT. Curva 2\"},\"client\":{\"id\":\"019fc6d3-dc0a-72cf-9bee-373170d99852\",\"name\":\"Demo Portal Project Client\"},\"projectType\":{\"id\":\"019f7344-31c7-70e3-b685-5b483e172d13\",\"code\":\"unit_price\",\"name\":\"Unit Price\"}},\"boq\":{\"id\":\"019fc6d3-dc59-7083-a898-a6bce38c5e36\",\"projectId\":\"019fc6d3-dc20-716e-92da-547af97d8bc0\",\"boqTemplateId\":null,\"code\":\"PP-DEMO-BOQ\",\"name\":\"BOQ Demo Portal Project\",\"limitBudgetPercentage\":null,\"isRabComplete\":true,\"isLimitBudgetComplete\":true,\"isCcoComplete\":false,\"isActive\":true,\"items\":[{\"id\":\"019fc6d3-dc72-72dc-9c96-c1b19888f618\",\"boqId\":\"019fc6d3-dc59-7083-a898-a6bce38c5e36\",\"parentId\":null,\"sortOrder\":1,\"level\":1,\"code\":\"A\",\"name\":\"Pekerjaan Persiapan\",\"uom\":{\"id\":\"019e900f-8447-727f-b0fd-b8ab35f33d43\",\"code\":\"L011\",\"name\":\"CM\"},\"isFinalLevel\":false,\"weight\":20,\"limitBudgetPercentage\":null,\"volumeProject\":\"-\",\"completedVolume\":0,\"status\":{\"value\":\"in_progress\",\"label\":\"Progress\"},\"canAssign\":false,\"canComplete\":false,\"assign\":[{\"id\":\"01a0c3ed-3a64-7314-95f7-312f67fdebc2\",\"employee\":{\"id\":\"019fc6d3-def7-703b-b207-970b6a103024\",\"code\":\"PP-EMP-002\",\"fullName\":\"Sari Wulandari\"},\"target\":null,\"helperEmployees\":[],\"note\":null,\"status\":\"in_progress\",\"assignDate\":\"2026-09-21\"}],\"isActive\":true,\"createdAt\":\"2026-08-03T01:53:21.000000Z\",\"updatedAt\":\"2026-08-03T02:17:15.000000Z\",\"children\":[{\"id\":\"019fc6d3-dc8e-711a-9b0f-36df3032e139\",\"boqId\":\"019fc6d3-dc59-7083-a898-a6bce38c5e36\",\"parentId\":\"019fc6d3-dc72-72dc-9c96-c1b19888f618\",\"sortOrder\":1,\"level\":2,\"code\":\"A.1\",\"name\":\"Mobilisasi Alat\",\"uom\":{\"id\":\"019e900f-8447-727f-b0fd-b8ab35f33d43\",\"code\":\"L011\",\"name\":\"CM\"},\"isFinalLevel\":false,\"weight\":10,\"limitBudgetPercentage\":null,\"volumeProject\":\"-\",\"completedVolume\":0,\"status\":{\"value\":\"in_progress\",\"label\":\"Progress\"},\"canAssign\":false,\"canComplete\":false,\"assign\":[{\"id\":\"01a0c3f4-64cf-73b9-b99b-5c7c847bc70f\",\"employee\":{\"id\":\"019fc6d3-def7-703b-b207-970b6a103024\",\"code\":\"PP-EMP-002\",\"fullName\":\"Sari Wulandari\"},\"target\":null,\"helperEmployees\":[],\"note\":null,\"status\":\"in_progress\",\"assignDate\":\"2026-09-21\"}],\"isActive\":true,\"createdAt\":\"2026-08-03T01:53:21.000000Z\",\"updatedAt\":\"2026-08-03T02:17:15.000000Z\",\"children\":[{\"id\":\"019fc6d3-dca0-705c-a371-6c349b2bc32c\",\"boqId\":\"019fc6d3-dc59-7083-a898-a6bce38c5e36\",\"parentId\":\"019fc6d3-dc8e-711a-9b0f-36df3032e139\",\"sortOrder\":1,\"level\":3,\"code\":\"A.1.1\",\"name\":\"Pengiriman Alat Berat\",\"uom\":{\"id\":\"019e900f-8447-727f-b0fd-b8ab35f33d43\",\"code\":\"L011\",\"name\":\"CM\"},\"isFinalLevel\":true,\"weight\":5,\"limitBudgetPercentage\":null,\"volumeProject\":100,\"completedVolume\":0,\"status\":{\"value\":\"in_progress\",\"label\":\"Progress\"},\"canAssign\":false,\"canComplete\":true,\"assign\":[{\"id\":\"01a0c3f9-3400-703f-be54-08d5d86fa535\",\"employee\":{\"id\":\"019fc6d3-dfe0-7355-87b2-f4342b174969\",\"code\":\"PP-EMP-003\",\"fullName\":\"Ali Rahman\"},\"target\":20,\"helperEmployees\":[{\"id\":\"019fc6d3-e1af-72dc-be30-e223d9fefe91\",\"code\":\"PP-EMP-005\",\"fullName\":\"Dedi Kurniawan\"}],\"note\":\"Target harian\",\"status\":\"in_progress\",\"assignDate\":\"2026-09-21\"},{\"id\":\"01a0c3f9-340a-70ca-bbb9-e2e0e1485bd1\",\"employee\":{\"id\":\"019fc6d3-def7-703b-b207-970b6a103024\",\"code\":\"PP-EMP-002\",\"fullName\":\"Sari Wulandari\"},\"target\":20,\"helperEmployees\":[{\"id\":\"019fc6d3-e1af-72dc-be30-e223d9fefe91\",\"code\":\"PP-EMP-005\",\"fullName\":\"Dedi Kurniawan\"}],\"note\":null,\"status\":\"in_progress\",\"assignDate\":\"2026-09-21\"},{\"id\":\"01a0c3fe-0f0f-706c-b64b-b021b892ad22\",\"employee\":{\"id\":\"019fc6d3-dfe0-7355-87b2-f4342b174969\",\"code\":\"PP-EMP-003\",\"fullName\":\"Ali Rahman\"},\"target\":20,\"helperEmployees\":[{\"id\":\"019fc6d3-e1af-72dc-be30-e223d9fefe91\",\"code\":\"PP-EMP-005\",\"fullName\":\"Dedi Kurniawan\"}],\"note\":\"Target harian\",\"status\":\"in_progress\",\"assignDate\":\"2026-09-21\"},{\"id\":\"01a0c3fe-0f18-73df-bb5a-5e2ec03d68bc\",\"employee\":{\"id\":\"019fc6d3-def7-703b-b207-970b6a103024\",\"code\":\"PP-EMP-002\",\"fullName\":\"Sari Wulandari\"},\"target\":20,\"helperEmployees\":[{\"id\":\"019fc6d3-e1af-72dc-be30-e223d9fefe91\",\"code\":\"PP-EMP-005\",\"fullName\":\"Dedi Kurniawan\"}],\"note\":null,\"status\":\"in_progress\",\"assignDate\":\"2026-09-21\"}],\"isActive\":true,\"createdAt\":\"2026-08-03T01:53:21.000000Z\",\"updatedAt\":\"2026-08-03T02:17:15.000000Z\",\"children\":[]},{\"id\":\"019fc6d3-dcb7-7396-ba13-3fde96c16e10\",\"boqId\":\"019fc6d3-dc59-7083-a898-a6bce38c5e36\",\"parentId\":\"019fc6d3-dc8e-711a-9b0f-36df3032e139\",\"sortOrder\":2,\"level\":3,\"code\":\"A.1.2\",\"name\":\"Setting Area Kerja\",\"uom\":{\"id\":\"019e900f-8447-727f-b0fd-b8ab35f33d43\",\"code\":\"L011\",\"name\":\"CM\"},\"isFinalLevel\":true,\"weight\":5,\"limitBudgetPercentage\":null,\"volumeProject\":100,\"completedVolume\":0,\"status\":{\"value\":\"not_assigned\",\"label\":\"Belum Assign\"},\"canAssign\":true,\"canComplete\":false,\"assign\":[],\"isActive\":true,\"createdAt\":\"2026-08-03T01:53:21.000000Z\",\"updatedAt\":\"2026-08-03T02:17:15.000000Z\",\"children\":[]}]},{\"id\":\"019fc6d3-dcbe-721c-98a8-f00b23ca9c91\",\"boqId\":\"019fc6d3-dc59-7083-a898-a6bce38c5e36\",\"parentId\":\"019fc6d3-dc72-72dc-9c96-c1b19888f618\",\"sortOrder\":2,\"level\":2,\"code\":\"A.2\",\"name\":\"Pembersihan Lahan\",\"uom\":{\"id\":\"019e900f-8447-727f-b0fd-b8ab35f33d43\",\"code\":\"L011\",\"name\":\"CM\"},\"isFinalLevel\":true,\"weight\":10,\"limitBudgetPercentage\":null,\"volumeProject\":100,\"completedVolume\":0,\"status\":{\"value\":\"not_assigned\",\"label\":\"Belum Assign\"},\"canAssign\":true,\"canComplete\":false,\"assign\":[],\"isActive\":true,\"createdAt\":\"2026-08-03T01:53:21.000000Z\",\"updatedAt\":\"2026-08-03T02:20:45.000000Z\",\"children\":[]}]},{\"id\":\"019fc6d3-dcc4-73e0-9ea3-f912dc5868bd\",\"boqId\":\"019fc6d3-dc59-7083-a898-a6bce38c5e36\",\"parentId\":null,\"sortOrder\":2,\"level\":1,\"code\":\"B\",\"name\":\"Pekerjaan Struktur\",\"uom\":{\"id\":\"019e900f-8447-727f-b0fd-b8ab35f33d43\",\"code\":\"L011\",\"name\":\"CM\"},\"isFinalLevel\":false,\"weight\":80,\"limitBudgetPercentage\":null,\"volumeProject\":\"-\",\"completedVolume\":0,\"status\":{\"value\":\"not_assigned\",\"label\":\"Belum Assign\"},\"canAssign\":true,\"canComplete\":false,\"assign\":[],\"isActive\":true,\"createdAt\":\"2026-08-03T01:53:21.000000Z\",\"updatedAt\":\"2026-08-04T16:33:01.000000Z\",\"children\":[{\"id\":\"019fc6d3-dcc9-722a-a91e-ad0e3dc99e68\",\"boqId\":\"019fc6d3-dc59-7083-a898-a6bce38c5e36\",\"parentId\":\"019fc6d3-dcc4-73e0-9ea3-f912dc5868bd\",\"sortOrder\":1,\"level\":2,\"code\":\"B.1\",\"name\":\"Pekerjaan Pondasi\",\"uom\":{\"id\":\"019e900f-8447-727f-b0fd-b8ab35f33d43\",\"code\":\"L011\",\"name\":\"CM\"},\"isFinalLevel\":false,\"weight\":50,\"limitBudgetPercentage\":null,\"volumeProject\":\"-\",\"completedVolume\":0,\"status\":{\"value\":\"not_assigned\",\"label\":\"Belum Assign\"},\"canAssign\":true,\"canComplete\":false,\"assign\":[],\"isActive\":true,\"createdAt\":\"2026-08-03T01:53:21.000000Z\",\"updatedAt\":\"2026-08-04T16:33:01.000000Z\",\"children\":[{\"id\":\"019fc6d3-dccf-73e7-af12-64c86049432c\",\"boqId\":\"019fc6d3-dc59-7083-a898-a6bce38c5e36\",\"parentId\":\"019fc6d3-dcc9-722a-a91e-ad0e3dc99e68\",\"sortOrder\":1,\"level\":3,\"code\":\"B.1.1\",\"name\":\"Galian Tanah Pondasi\",\"uom\":{\"id\":\"019e900f-8447-727f-b0fd-b8ab35f33d43\",\"code\":\"L011\",\"name\":\"CM\"},\"isFinalLevel\":true,\"weight\":25,\"limitBudgetPercentage\":null,\"volumeProject\":100,\"completedVolume\":0,\"status\":{\"value\":\"not_assigned\",\"label\":\"Belum Assign\"},\"canAssign\":true,\"canComplete\":false,\"assign\":[],\"isActive\":true,\"createdAt\":\"2026-08-03T01:53:21.000000Z\",\"updatedAt\":\"2026-08-04T16:33:01.000000Z\",\"children\":[]},{\"id\":\"019fc6d3-dcd5-7104-a5db-d866646c8eaf\",\"boqId\":\"019fc6d3-dc59-7083-a898-a6bce38c5e36\",\"parentId\":\"019fc6d3-dcc9-722a-a91e-ad0e3dc99e68\",\"sortOrder\":2,\"level\":3,\"code\":\"B.1.2\",\"name\":\"Pengecoran Pondasi\",\"uom\":{\"id\":\"019e900f-8447-727f-b0fd-b8ab35f33d43\",\"code\":\"L011\",\"name\":\"CM\"},\"isFinalLevel\":true,\"weight\":25,\"limitBudgetPercentage\":null,\"volumeProject\":100,\"completedVolume\":0,\"status\":{\"value\":\"not_assigned\",\"label\":\"Belum Assign\"},\"canAssign\":true,\"canComplete\":false,\"assign\":[],\"isActive\":true,\"createdAt\":\"2026-08-03T01:53:21.000000Z\",\"updatedAt\":\"2026-08-04T16:33:01.000000Z\",\"children\":[]}]},{\"id\":\"019fc6d3-dcda-73ca-8dfe-3e5345b6dfeb\",\"boqId\":\"019fc6d3-dc59-7083-a898-a6bce38c5e36\",\"parentId\":\"019fc6d3-dcc4-73e0-9ea3-f912dc5868bd\",\"sortOrder\":2,\"level\":2,\"code\":\"B.2\",\"name\":\"Pekerjaan Dinding\",\"uom\":{\"id\":\"019e900f-8447-727f-b0fd-b8ab35f33d43\",\"code\":\"L011\",\"name\":\"CM\"},\"isFinalLevel\":true,\"weight\":30,\"limitBudgetPercentage\":null,\"volumeProject\":100,\"completedVolume\":0,\"status\":{\"value\":\"not_assigned\",\"label\":\"Belum Assign\"},\"canAssign\":true,\"canComplete\":false,\"assign\":[],\"isActive\":true,\"createdAt\":\"2026-08-03T01:53:21.000000Z\",\"updatedAt\":\"2026-08-04T16:33:01.000000Z\",\"children\":[]}]}]}}}",
+          "code": 200,
+          "name": "success",
+          "status": "OK",
+          "headers": [
+            {
+              "key": "cache-control",
+              "value": "no-cache, private"
+            },
+            {
+              "key": "content-type",
+              "value": "application/json"
+            }
+          ],
+          "originalRequest": {
+            "v": "6",
+            "auth": {
+              "token": "<<token>>",
+              "authType": "bearer",
+              "authActive": true
+            },
+            "body": {
+              "body": null,
+              "contentType": null
+            },
+            "name": "Manpower Planning List",
+            "method": "GET",
+            "params": [
+              {
+                "key": "search",
+                "value": "",
+                "active": true,
+                "description": ""
+              },
+              {
+                "key": "status",
+                "value": "",
+                "active": true,
+                "description": ""
+              },
+              {
+                "key": "sortBy",
+                "value": "",
+                "active": true,
+                "description": ""
+              }
+            ],
+            "headers": [
+              {
+                "key": "X-Project-Id",
+                "value": "019fc6d3-dc20-716e-92da-547af97d8bc0",
+                "active": true,
+                "description": ""
+              }
+            ],
+            "endpoint": "<<BASE_URL>>/v1/project-management/manpower-planning",
+            "requestVariables": []
+          }
+        }
+      },
+      "testScript": "",
+      "description": null,
+      "preRequestScript": "",
+      "requestVariables": [],
+      "id": "cmub2b67u0ec8e11jf3hqqr3u"
+    },
+    {
+      "v": "17",
+      "auth": {
+        "token": "<<token>>",
+        "authType": "bearer",
+        "authActive": true
+      },
+      "body": {
+        "body": "{\n  \"boqItemIds\": [\n    \"019fc6d3-dc72-72dc-9c96-c1b19888f618\"\n  ],\n  \"employeeId\": \"019fc6d3-def7-703b-b207-970b6a103024\",\n  \"note\": \"\"\n}",
+        "contentType": "application/json"
+      },
+      "name": "Delegate Non FInal Level",
+      "method": "POST",
+      "params": [],
+      "headers": [
+        {
+          "key": "X-Project-Id",
+          "value": "019fc6d3-dc20-716e-92da-547af97d8bc0",
+          "active": true,
+          "description": ""
+        }
+      ],
+      "endpoint": "<<BASE_URL>>/v1/project-management/project-tasks/delegate/non-final",
+      "responses": {
+        "success": {
+          "body": "{\"success\":true,\"message\":\"BOQ item non-final berhasil didelegasikan.\",\"data\":[{\"id\":\"01a0c3ed-3a64-7314-95f7-312f67fdebc2\",\"projectTaskId\":null,\"boqItemId\":\"019fc6d3-dc72-72dc-9c96-c1b19888f618\",\"status\":\"in_progress\",\"delegationDate\":\"2026-09-21\",\"note\":null,\"employee\":{\"id\":\"019fc6d3-def7-703b-b207-970b6a103024\",\"code\":\"PP-EMP-002\",\"fullName\":\"Sari Wulandari\"},\"createdAt\":\"2026-09-21T12:24:59.000000Z\",\"updatedAt\":\"2026-09-21T12:24:59.000000Z\"}]}",
+          "code": 201,
+          "name": "success",
+          "status": "Created",
+          "headers": [
+            {
+              "key": "cache-control",
+              "value": "no-cache, private"
+            },
+            {
+              "key": "content-type",
+              "value": "application/json"
+            }
+          ],
+          "originalRequest": {
+            "v": "6",
+            "auth": {
+              "token": "<<token>>",
+              "authType": "bearer",
+              "authActive": true
+            },
+            "body": {
+              "body": "{\n  \"boqItemIds\": [\n    \"019fc6d3-dc72-72dc-9c96-c1b19888f618\"\n  ],\n  \"employeeId\": \"019fc6d3-def7-703b-b207-970b6a103024\",\n  \"note\": \"\"\n}",
+              "contentType": "application/json"
+            },
+            "name": "Delegate Non FInal Level",
+            "method": "POST",
+            "params": [],
+            "headers": [
+              {
+                "key": "X-Project-Id",
+                "value": "019fc6d3-dc20-716e-92da-547af97d8bc0",
+                "active": true,
+                "description": ""
+              }
+            ],
+            "endpoint": "<<BASE_URL>>/v1/project-management/project-tasks/delegate/non-final",
+            "requestVariables": []
+          }
+        }
+      },
+      "testScript": "",
+      "description": null,
+      "preRequestScript": "",
+      "requestVariables": [],
+      "id": "cmub7zbon0f2pg41jyxjd4qjk"
+    },
+    {
+      "v": "17",
+      "auth": {
+        "token": "<<token>>",
+        "authType": "bearer",
+        "authActive": true
+      },
+      "body": {
+        "body": "{\n  \"boqItemId\": \"019fc6d3-dca0-705c-a371-6c349b2bc32c\",\n  \"manpower\": [\n    {\n      \"employeeId\": \"019fc6d3-dfe0-7355-87b2-f4342b174969\",\n      \"target\": 20,\n      \"helperEmployeeIds\": [\n        \"019fc6d3-e1af-72dc-be30-e223d9fefe91\"\n      ],\n      \"note\": \"Target harian\"\n    },\n    {\n      \"employeeId\": \"019fc6d3-def7-703b-b207-970b6a103024\",\n      \"target\": 20,\n      \"helperEmployeeIds\": [\n        \"019fc6d3-e1af-72dc-be30-e223d9fefe91\"\n      ],\n      \"note\": null\n    }\n  ]\n}",
+        "contentType": "application/json"
+      },
+      "name": "Delegate FInal Level",
+      "method": "POST",
+      "params": [],
+      "headers": [
+        {
+          "key": "X-Project-Id",
+          "value": "019fc6d3-dc20-716e-92da-547af97d8bc0",
+          "active": true,
+          "description": ""
+        }
+      ],
+      "endpoint": "<<BASE_URL>>/v1/project-management/project-tasks/delegate/final",
+      "responses": {
+        "success": {
+          "body": "{\"success\":true,\"message\":\"Task manpower harian berhasil dibuat dan didelegasikan.\",\"data\":[{\"id\":\"01a0c3fe-0f0f-706c-b64b-b021b892ad22\",\"projectId\":\"019fc6d3-dc20-716e-92da-547af97d8bc0\",\"parentTaskId\":null,\"taskType\":\"work\",\"sourceWorkTaskId\":null,\"boqItemId\":\"019fc6d3-dca0-705c-a371-6c349b2bc32c\",\"title\":\"Pengiriman Alat Berat\",\"description\":null,\"status\":\"in_progress\",\"statusLabel\":\"Progress\",\"assignedToEmployeeId\":\"019fc6d3-dfe0-7355-87b2-f4342b174969\",\"assignDate\":\"2026-09-20T17:00:00.000000Z\",\"targetVolume\":\"20.0000\",\"completedVolume\":\"0.0000\",\"createdByUserId\":\"019fc6d3-dddc-73ba-b639-6c91b8127b83\",\"doneAt\":null,\"doneByUserId\":null,\"qcDecision\":null,\"retryCount\":0,\"notes\":\"Target harian\",\"isActive\":true,\"createdAt\":\"2026-09-21T12:43:22.000000Z\",\"updatedAt\":\"2026-09-21T12:43:22.000000Z\",\"boqItem\":{\"id\":\"019fc6d3-dca0-705c-a371-6c349b2bc32c\",\"code\":\"A.1.1\",\"name\":\"Pengiriman Alat Berat\"},\"assignedEmployee\":{\"id\":\"019fc6d3-dfe0-7355-87b2-f4342b174969\",\"code\":\"PP-EMP-003\",\"fullName\":\"Ali Rahman\"},\"helperEmployees\":[{\"id\":\"019fc6d3-e1af-72dc-be30-e223d9fefe91\",\"code\":\"PP-EMP-005\",\"fullName\":\"Dedi Kurniawan\"}],\"createdByUser\":{\"id\":\"019fc6d3-dddc-73ba-b639-6c91b8127b83\",\"name\":\"Budi Santoso\"},\"doneByUser\":null,\"noteActivities\":\"Target harian\"},{\"id\":\"01a0c3fe-0f18-73df-bb5a-5e2ec03d68bc\",\"projectId\":\"019fc6d3-dc20-716e-92da-547af97d8bc0\",\"parentTaskId\":null,\"taskType\":\"work\",\"sourceWorkTaskId\":null,\"boqItemId\":\"019fc6d3-dca0-705c-a371-6c349b2bc32c\",\"title\":\"Pengiriman Alat Berat\",\"description\":null,\"status\":\"in_progress\",\"statusLabel\":\"Progress\",\"assignedToEmployeeId\":\"019fc6d3-def7-703b-b207-970b6a103024\",\"assignDate\":\"2026-09-20T17:00:00.000000Z\",\"targetVolume\":\"20.0000\",\"completedVolume\":\"0.0000\",\"createdByUserId\":\"019fc6d3-dddc-73ba-b639-6c91b8127b83\",\"doneAt\":null,\"doneByUserId\":null,\"qcDecision\":null,\"retryCount\":0,\"notes\":null,\"isActive\":true,\"createdAt\":\"2026-09-21T12:43:22.000000Z\",\"updatedAt\":\"2026-09-21T12:43:22.000000Z\",\"boqItem\":{\"id\":\"019fc6d3-dca0-705c-a371-6c349b2bc32c\",\"code\":\"A.1.1\",\"name\":\"Pengiriman Alat Berat\"},\"assignedEmployee\":{\"id\":\"019fc6d3-def7-703b-b207-970b6a103024\",\"code\":\"PP-EMP-002\",\"fullName\":\"Sari Wulandari\"},\"helperEmployees\":[{\"id\":\"019fc6d3-e1af-72dc-be30-e223d9fefe91\",\"code\":\"PP-EMP-005\",\"fullName\":\"Dedi Kurniawan\"}],\"createdByUser\":{\"id\":\"019fc6d3-dddc-73ba-b639-6c91b8127b83\",\"name\":\"Budi Santoso\"},\"doneByUser\":null,\"noteActivities\":null}]}",
+          "code": 201,
+          "name": "success",
+          "status": "Created",
+          "headers": [
+            {
+              "key": "cache-control",
+              "value": "no-cache, private"
+            },
+            {
+              "key": "content-type",
+              "value": "application/json"
+            }
+          ],
+          "originalRequest": {
+            "v": "6",
+            "auth": {
+              "token": "<<token>>",
+              "authType": "bearer",
+              "authActive": true
+            },
+            "body": {
+              "body": "{\n  \"boqItemId\": \"019fc6d3-dca0-705c-a371-6c349b2bc32c\",\n  \"manpower\": [\n    {\n      \"employeeId\": \"019fc6d3-dfe0-7355-87b2-f4342b174969\",\n      \"target\": 20,\n      \"helperEmployeeIds\": [\n        \"019fc6d3-e1af-72dc-be30-e223d9fefe91\"\n      ],\n      \"note\": \"Target harian\"\n    },\n    {\n      \"employeeId\": \"019fc6d3-def7-703b-b207-970b6a103024\",\n      \"target\": 20,\n      \"helperEmployeeIds\": [\n        \"019fc6d3-e1af-72dc-be30-e223d9fefe91\"\n      ],\n      \"note\": null\n    }\n  ]\n}",
+              "contentType": "application/json"
+            },
+            "name": "Delegate FInal Level",
+            "method": "POST",
+            "params": [],
+            "headers": [
+              {
+                "key": "X-Project-Id",
+                "value": "019fc6d3-dc20-716e-92da-547af97d8bc0",
+                "active": true,
+                "description": ""
+              }
+            ],
+            "endpoint": "<<BASE_URL>>/v1/project-management/project-tasks/delegate/final",
+            "requestVariables": []
+          }
+        }
+      },
+      "testScript": "",
+      "description": null,
+      "preRequestScript": "",
+      "requestVariables": [],
+      "id": "cmub8ked50fp9g41j7ppitvl6"
+    },
+    {
+      "v": "17",
+      "auth": {
+        "token": "<<token>>",
+        "authType": "bearer",
+        "authActive": true
+      },
+      "body": {
+        "body": null,
+        "contentType": null
+      },
+      "name": "Get Detail Item",
+      "method": "GET",
+      "params": [],
+      "headers": [
+        {
+          "key": "X-Project-Id",
+          "value": "019fc6d3-dc20-716e-92da-547af97d8bc0",
+          "active": true,
+          "description": ""
+        }
+      ],
+      "endpoint": "<<BASE_URL>>/v1/project-management/project-tasks/items/<<boqItemId>>",
+      "responses": {
+        "success item final": {
+          "body": "{\n  \"success\": true,\n  \"message\": \"Laporan harian manpower berhasil diambil.\",\n  \"data\": {\n    \"id\": \"019fc6d3-dca0-705c-a371-6c349b2bc32c\",\n    \"code\": \"A.1.1\",\n    \"name\": \"Pengiriman Alat Berat\",\n    \"reportDate\": \"2026-09-22\",\n    \"createdBy\": {\n      \"id\": \"019fc6d3-dddc-73ba-b639-6c91b8127b83\",\n      \"name\": \"Budi Santoso\"\n    },\n    \"volumeBoq\": 100,\n    \"duration\": 4,\n    \"currentProgress\": 20,\n    \"uom\": {\n      \"id\": \"019e900f-8447-727f-b0fd-b8ab35f33d43\",\n      \"code\": \"L011\",\n      \"name\": \"CM\"\n    },\n    \"totalManpower\": 1,\n    \"completedManpower\": 1,\n    \"pendingManpower\": 0,\n    \"lastUpdated\": \"2026-09-22T16:26:42+07:00\",\n    \"manpower\": [\n      {\n        \"projectTaskId\": \"01a0c847-9528-70b4-a1ab-3c66870b7bb9\",\n        \"employee\": {\n          \"id\": \"019fc6d3-def7-703b-b207-970b6a103024\",\n          \"code\": \"PP-EMP-002\",\n          \"fullName\": \"Sari Wulandari\"\n        },\n        \"helpers\": [\n          {\n            \"id\": \"019fc6d3-e1af-72dc-be30-e223d9fefe91\",\n            \"code\": \"PP-EMP-005\",\n            \"fullName\": \"Dedi Kurniawan\"\n          }\n        ],\n        \"target\": 20,\n        \"completedVolume\": 20,\n        \"note\": \"done\",\n        \"taskEvidence\": {\n          \"documentType\": {\n            \"id\": \"019f32b4-4120-735f-8352-cf498c83e857\",\n            \"code\": \"TASK_EVIDENCE\",\n            \"name\": \"Task Evidence\",\n            \"description\": \"Bukti penyelesaian project task\",\n            \"allowedFileTypes\": \"jpg,jpeg,png,pdf,zip,doc,docx,xls,xlsx\",\n            \"allowedFileSize\": 10240\n          },\n          \"uploadedDocuments\": [\n            {\n              \"id\": \"01a0c86d-fca0-7202-b2e5-15dcf3d4d267\",\n              \"fileName\": \"ZZZTest Doc.pdf\",\n              \"filePath\": \"tasks/01a0c847-9528-70b4-a1ab-3c66870b7bb9/evidences/eBDg2dNtPHXrpuhpotv5bYMzEKE8XdLZ1eYUKmqr.pdf\",\n              \"url\": \"http://127.0.0.1:8000/storage/tasks/01a0c847-9528-70b4-a1ab-3c66870b7bb9/evidences/eBDg2dNtPHXrpuhpotv5bYMzEKE8XdLZ1eYUKmqr.pdf\",\n              \"fileSize\": 35836,\n              \"mimeType\": \"application/pdf\",\n              \"uploadedBy\": {\n                \"id\": \"019fc6d3-dddc-73ba-b639-6c91b8127b83\",\n                \"name\": \"Budi Santoso\"\n              },\n              \"uploadedAt\": \"2026-09-22T16:24:06+07:00\"\n            }\n          ]\n        },\n        \"taskHistory\": [\n          {\n            \"projectTaskId\": \"01a0c86d-fca4-71db-8ffd-cb337275d092\",\n            \"actor\": {\n              \"id\": \"019fc6d3-dddc-73ba-b639-6c91b8127b83\",\n              \"name\": \"Budi Santoso\"\n            },\n            \"note\": \"oke baik untuk pengerjaannnya\",\n            \"documents\": [\n              {\n                \"id\": \"01a0c870-5ea9-722d-8878-55cf45d13cbe\",\n                \"documentType\": {\n                  \"id\": \"019f32b4-4128-7025-8154-444bd1619cb5\",\n                  \"code\": \"QC_EVIDENCE\",\n                  \"name\": \"QC Evidence\"\n                },\n                \"fileName\": \"ZZZTest Doc.pdf\",\n                \"filePath\": \"tasks/01a0c86d-fca4-71db-8ffd-cb337275d092/evidences/5xatAl1XmEZ2ISBjYIvjxV6T4ctlF41P8UK4tyIH.pdf\",\n                \"url\": \"http://127.0.0.1:8000/storage/tasks/01a0c86d-fca4-71db-8ffd-cb337275d092/evidences/5xatAl1XmEZ2ISBjYIvjxV6T4ctlF41P8UK4tyIH.pdf\",\n                \"fileSize\": 35836,\n                \"mimeType\": \"application/pdf\",\n                \"uploadedAt\": \"2026-09-22T16:26:42+07:00\"\n              }\n            ],\n            \"recordedAt\": \"2026-09-22T16:26:42+07:00\",\n            \"event\": \"qc_decision\",\n            \"eventLabel\": \"QC menyetujui tugas\",\n            \"decision\": {\n              \"value\": \"approved\",\n              \"label\": \"Disetujui\"\n            }\n          },\n          {\n            \"projectTaskId\": \"01a0c847-9528-70b4-a1ab-3c66870b7bb9\",\n            \"actor\": {\n              \"id\": \"019fc6d3-dddc-73ba-b639-6c91b8127b83\",\n              \"name\": \"Budi Santoso\"\n            },\n            \"note\": \"done\",\n            \"documents\": [\n              {\n                \"id\": \"01a0c86d-fca0-7202-b2e5-15dcf3d4d267\",\n                \"documentType\": {\n                  \"id\": \"019f32b4-4120-735f-8352-cf498c83e857\",\n                  \"code\": \"TASK_EVIDENCE\",\n                  \"name\": \"Task Evidence\"\n                },\n                \"fileName\": \"ZZZTest Doc.pdf\",\n                \"filePath\": \"tasks/01a0c847-9528-70b4-a1ab-3c66870b7bb9/evidences/eBDg2dNtPHXrpuhpotv5bYMzEKE8XdLZ1eYUKmqr.pdf\",\n                \"url\": \"http://127.0.0.1:8000/storage/tasks/01a0c847-9528-70b4-a1ab-3c66870b7bb9/evidences/eBDg2dNtPHXrpuhpotv5bYMzEKE8XdLZ1eYUKmqr.pdf\",\n                \"fileSize\": 35836,\n                \"mimeType\": \"application/pdf\",\n                \"uploadedAt\": \"2026-09-22T16:24:06+07:00\"\n              }\n            ],\n            \"recordedAt\": \"2026-09-22T16:24:06+07:00\",\n            \"event\": \"submitted_to_qc\",\n            \"eventLabel\": \"Tugas diajukan ke QC\"\n          }\n        ],\n        \"status\": {\n          \"value\": \"done\",\n          \"label\": \"Selesai\"\n        },\n        \"isCompleted\": true,\n        \"assignDate\": \"2026-09-22\",\n        \"lastUpdated\": \"2026-09-22T16:26:42+07:00\"\n      }\n    ]\n  }\n}",
+          "code": 200,
+          "name": "success item final",
+          "status": "OK",
+          "headers": [
+            {
+              "key": "cache-control",
+              "value": "no-cache, private"
+            },
+            {
+              "key": "content-type",
+              "value": "application/json"
+            }
+          ],
+          "originalRequest": {
+            "v": "6",
+            "auth": {
+              "token": "<<token>>",
+              "authType": "bearer",
+              "authActive": true
+            },
+            "body": {
+              "body": null,
+              "contentType": null
+            },
+            "name": "Get Detail Item",
+            "method": "GET",
+            "params": [],
+            "headers": [
+              {
+                "key": "X-Project-Id",
+                "value": "019fc6d3-dc20-716e-92da-547af97d8bc0",
+                "active": true,
+                "description": ""
+              }
+            ],
+            "endpoint": "<<BASE_URL>>/v1/project-management/project-tasks/items/<<boqItemId>>",
+            "requestVariables": [
+              {
+                "key": "boqItemId",
+                "value": "019fc6d3-dca0-705c-a371-6c349b2bc32c",
+                "active": true
+              }
+            ]
+          }
+        },
+        "success item non final": {
+          "body": "{\"success\":true,\"message\":\"Detail project task berhasil diambil.\",\"data\":{\"id\":\"019fc6d3-dc72-72dc-9c96-c1b19888f618\",\"code\":\"A\",\"name\":\"Pekerjaan Persiapan\",\"uom\":{\"id\":\"019e900f-8447-727f-b0fd-b8ab35f33d43\",\"code\":\"L011\",\"name\":\"CM\"},\"isFinalLevel\":false,\"status\":{\"value\":\"in_progress\",\"label\":\"Progress\"},\"createdBy\":{\"id\":\"019fc6d3-dddc-73ba-b639-6c91b8127b83\",\"name\":\"Budi Santoso\"},\"assign\":{\"id\":\"01a0c537-474f-72e8-86a9-38a183677ebb\",\"employee\":{\"id\":\"019fc6d3-def7-703b-b207-970b6a103024\",\"code\":\"PP-EMP-002\",\"fullName\":\"Sari Wulandari\"},\"status\":\"in_progress\",\"assignDate\":\"2026-09-22\",\"target\":null,\"helperEmployees\":[]},\"lastUpdated\":\"2026-09-22T01:25:29+07:00\",\"note\":null,\"children\":[{\"id\":\"019fc6d3-dc8e-711a-9b0f-36df3032e139\",\"code\":\"A.1\",\"name\":\"Mobilisasi Alat\",\"uom\":{\"id\":\"019e900f-8447-727f-b0fd-b8ab35f33d43\",\"code\":\"L011\",\"name\":\"CM\"},\"status\":{\"value\":\"in_progress\",\"label\":\"Progress\"}},{\"id\":\"019fc6d3-dcbe-721c-98a8-f00b23ca9c91\",\"code\":\"A.2\",\"name\":\"Pembersihan Lahan\",\"uom\":{\"id\":\"019e900f-8447-727f-b0fd-b8ab35f33d43\",\"code\":\"L011\",\"name\":\"CM\"},\"status\":{\"value\":\"not_assigned\",\"label\":\"Belum Assign\"}}]}}",
+          "code": 200,
+          "name": "success item non final",
+          "status": "OK",
+          "headers": [
+            {
+              "key": "cache-control",
+              "value": "no-cache, private"
+            },
+            {
+              "key": "content-type",
+              "value": "application/json"
+            }
+          ],
+          "originalRequest": {
+            "v": "6",
+            "auth": {
+              "token": "<<token>>",
+              "authType": "bearer",
+              "authActive": true
+            },
+            "body": {
+              "body": null,
+              "contentType": null
+            },
+            "name": "Get Detail Item",
+            "method": "GET",
+            "params": [],
+            "headers": [
+              {
+                "key": "X-Project-Id",
+                "value": "019fc6d3-dc20-716e-92da-547af97d8bc0",
+                "active": true,
+                "description": ""
+              }
+            ],
+            "endpoint": "<<BASE_URL>>/v1/project-management/project-tasks/items/<<boqItemId>>",
+            "requestVariables": [
+              {
+                "key": "boqItemId",
+                "value": "019fc6d3-dc72-72dc-9c96-c1b19888f618",
+                "active": true
+              }
+            ]
+          }
+        }
+      },
+      "testScript": "",
+      "description": null,
+      "preRequestScript": "",
+      "requestVariables": [
+        {
+          "key": "boqItemId",
+          "value": "019fc6d3-dca0-705c-a371-6c349b2bc32c",
+          "active": true
+        }
+      ],
+      "id": "cmublvemc0iuhg41jvx70b2oo"
+    },
+    {
+      "v": "17",
+      "auth": {
+        "token": "<<token>>",
+        "authType": "bearer",
+        "authActive": true
+      },
+      "body": {
+        "body": [
+          {
+            "key": "manpower[0][projectTaskId]",
+            "value": "01a0c55f-1037-73d5-9442-164da3dfe7e5",
+            "active": true,
+            "isFile": false
+          },
+          {
+            "key": "manpower[0][completedVolume]",
+            "value": "20",
+            "active": true,
+            "isFile": false
+          },
+          {
+            "key": "manpower[0][note]",
+            "value": "done",
+            "active": true,
+            "isFile": false
+          },
+          {
+            "key": "manpower[0][files][0]",
+            "value": [
+              {}
+            ],
+            "active": true,
+            "isFile": true
+          },
+          {
+            "key": "manpower[0][files][1]",
+            "value": [
+              {}
+            ],
+            "active": true,
+            "isFile": true
+          }
+        ],
+        "contentType": "multipart/form-data",
+        "isBulkEditing": false
+      },
+      "name": "Mark Done Task",
+      "method": "POST",
+      "params": [],
+      "headers": [
+        {
+          "key": "X-Project-Id",
+          "value": "019fc6d3-dc20-716e-92da-547af97d8bc0",
+          "active": true,
+          "description": ""
+        }
+      ],
+      "endpoint": "<<BASE_URL>>/v1/project-management/project-tasks/items/<<boqItemId>>/done",
+      "responses": {
+        "success": {
+          "body": "{\"success\":true,\"message\":\"Laporan manpower berhasil dikirim dan sedang menunggu QC.\",\"data\":[{\"id\":\"01a0c55f-1037-73d5-9442-164da3dfe7e5\",\"projectId\":\"019fc6d3-dc20-716e-92da-547af97d8bc0\",\"parentTaskId\":null,\"taskType\":\"work\",\"sourceWorkTaskId\":null,\"boqItemId\":\"019fc6d3-dca0-705c-a371-6c349b2bc32c\",\"title\":\"Pengiriman Alat Berat\",\"description\":null,\"status\":\"qc_waiting\",\"statusLabel\":\"Menunggu QC\",\"assignedToEmployeeId\":\"019fc6d3-dfe0-7355-87b2-f4342b174969\",\"assignDate\":\"2026-09-21T17:00:00.000000Z\",\"targetVolume\":\"20.0000\",\"completedVolume\":\"20.0000\",\"createdByUserId\":\"019fc6d3-dddc-73ba-b639-6c91b8127b83\",\"doneAt\":\"2026-09-21T20:08:19.000000Z\",\"doneByUserId\":\"019fc6d3-dddc-73ba-b639-6c91b8127b83\",\"qcDecision\":null,\"retryCount\":0,\"notes\":\"done\",\"isActive\":true,\"createdAt\":\"2026-09-21T19:08:56.000000Z\",\"updatedAt\":\"2026-09-21T20:08:19.000000Z\",\"boqItem\":{\"id\":\"019fc6d3-dca0-705c-a371-6c349b2bc32c\",\"code\":\"A.1.1\",\"name\":\"Pengiriman Alat Berat\",\"uom\":{\"id\":\"019e900f-8447-727f-b0fd-b8ab35f33d43\",\"code\":\"L011\",\"name\":\"CM\"}},\"assignedEmployee\":{\"id\":\"019fc6d3-dfe0-7355-87b2-f4342b174969\",\"code\":\"PP-EMP-003\",\"fullName\":\"Ali Rahman\"},\"helperEmployees\":[{\"id\":\"019fc6d3-e1af-72dc-be30-e223d9fefe91\",\"code\":\"PP-EMP-005\",\"fullName\":\"Dedi Kurniawan\"}],\"createdByUser\":{\"id\":\"019fc6d3-dddc-73ba-b639-6c91b8127b83\",\"name\":\"Budi Santoso\"},\"doneByUser\":{\"id\":\"019fc6d3-dddc-73ba-b639-6c91b8127b83\",\"name\":\"Budi Santoso\"},\"noteActivities\":\"done\",\"documents\":[{\"id\":\"01a0c595-6cde-72ce-8e39-ee9be63a76fb\",\"filePath\":\"http:\\/\\/127.0.0.1:8000\\/storage\\/tasks\\/01a0c55f-1037-73d5-9442-164da3dfe7e5\\/evidences\\/BTTJpSUb0y9I8Fryn5RjvHtG70LgudJE2plowVnT.pdf\",\"fileName\":\"test.pdf\",\"fileSize\":25935,\"mimeType\":\"application\\/pdf\"},{\"id\":\"01a0c595-6ce0-70fa-84ad-b5c97ca565b5\",\"filePath\":\"http:\\/\\/127.0.0.1:8000\\/storage\\/tasks\\/01a0c55f-1037-73d5-9442-164da3dfe7e5\\/evidences\\/0v6zWd4VlfUzffTKBWz5bTdR4T78zi6lzZQmUvc6.pdf\",\"fileName\":\"test.pdf\",\"fileSize\":25935,\"mimeType\":\"application\\/pdf\"}]}]}",
+          "code": 200,
+          "name": "success",
+          "status": "OK",
+          "headers": [
+            {
+              "key": "cache-control",
+              "value": "no-cache, private"
+            },
+            {
+              "key": "content-type",
+              "value": "application/json"
+            }
+          ],
+          "originalRequest": {
+            "v": "6",
+            "auth": {
+              "token": "<<token>>",
+              "authType": "bearer",
+              "authActive": true
+            },
+            "body": {
+              "body": [
+                {
+                  "key": "manpower[0][projectTaskId]",
+                  "value": "01a0c55f-1037-73d5-9442-164da3dfe7e5",
+                  "active": true,
+                  "isFile": false
+                },
+                {
+                  "key": "manpower[0][completedVolume]",
+                  "value": "20",
+                  "active": true,
+                  "isFile": false
+                },
+                {
+                  "key": "manpower[0][note]",
+                  "value": "done",
+                  "active": true,
+                  "isFile": false
+                },
+                {
+                  "key": "manpower[0][files][0]",
+                  "value": [
+                    {}
+                  ],
+                  "active": true,
+                  "isFile": true
+                },
+                {
+                  "key": "manpower[0][files][1]",
+                  "value": [
+                    {}
+                  ],
+                  "active": true,
+                  "isFile": true
+                }
+              ],
+              "contentType": "multipart/form-data",
+              "isBulkEditing": false
+            },
+            "name": "Mark Done Task",
+            "method": "POST",
+            "params": [],
+            "headers": [
+              {
+                "key": "X-Project-Id",
+                "value": "019fc6d3-dc20-716e-92da-547af97d8bc0",
+                "active": true,
+                "description": ""
+              }
+            ],
+            "endpoint": "<<BASE_URL>>/v1/project-management/project-tasks/items/<<boqItemId>>/done",
+            "requestVariables": [
+              {
+                "key": "boqItemId",
+                "value": "019fc6d3-dca0-705c-a371-6c349b2bc32c",
+                "active": true
+              }
+            ]
+          }
+        }
+      },
+      "testScript": "",
+      "description": null,
+      "preRequestScript": "",
+      "requestVariables": [
+        {
+          "key": "boqItemId",
+          "value": "019fc6d3-dca0-705c-a371-6c349b2bc32c",
+          "active": true
+        }
+      ],
+      "id": "cmubobv6z0jnsg41jecoajm11"
+    }
+  ],
+  "auth": {
+    "authType": "inherit",
+    "authActive": true
+  },
+  "headers": [],
+  "variables": [],
+  "description": null,
+  "preRequestScript": "",
+  "testScript": ""
+}
